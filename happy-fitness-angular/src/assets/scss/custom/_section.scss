@@ -10,13 +10,18 @@
 }
 
 .section-lg {
-    padding-top: $spacer * 6;
-    padding-bottom: $spacer * 6;
+    // padding-top: $spacer * 6;
+    // padding-bottom: $spacer * 6;
+    background-image: url(../../img/Fitness-background.png); background-size: cover; background-position: center top;
 }
 
 .section-sm {
     padding-top: $spacer * 2;
     padding-bottom: $spacer * 2;
+}
+
+.background-fitness{
+    background-image: url(../../img/Fitness-background.png); background-size: cover; background-position: center top;
 }
 
 // Hero sections
