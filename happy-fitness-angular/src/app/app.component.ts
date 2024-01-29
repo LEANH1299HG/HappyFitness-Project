@@ -9,9 +9,8 @@ import {
 } from "@angular/core";
 import { Router, NavigationEnd } from "@angular/router";
 import { DOCUMENT } from "@angular/common";
-import { LocationStrategy, PlatformLocation, Location } from "@angular/common";
+import { Location } from "@angular/common";
 import { filter, Observable, Subscription } from "rxjs";
-// import { AuthService } from "./services/auth.service";
 
 var didScroll;
 var lastScrollTop = 0;
@@ -24,6 +23,7 @@ var navbarHeight = 0;
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
+  private _router: Subscription;
   adminNavbar = false;
   cleanerNavbar = false;
   customerNavbar = false;
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   managerNavbar = false;
   leadNavbar = false;
   isAuthenticated = false;
-  // isAuthenticated$: Observable<boolean>;
+  isAuthenticated$: Observable<boolean>;
   username: any;
   id: any;
 
@@ -73,11 +73,7 @@ export class AppComponent implements OnInit {
 
     lastScrollTop = st;
   }
-  ngOnInit() {
-   
-    
-    // }
-
+  ngOnInit() {   
     var navbar: HTMLElement =
       this.element.nativeElement.children[0].children[0];
     this._router = this.router.events

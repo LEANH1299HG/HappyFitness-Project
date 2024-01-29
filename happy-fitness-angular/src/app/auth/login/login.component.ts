@@ -10,11 +10,11 @@ import { ToastrService } from "ngx-toastr";
 export class LoginComponent implements OnInit {
   @ViewChild("account") accountElement: any;
 
-  focus: any;
-  focus1: any;
+  focus;
+  focus1;
   account_name: any;
   accountBlur = false;
-  password: any;
+  password: string;
   isCacheCleared = false;
   account_wrong = false;
   constructor(
@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-  
   }
 
   clearCache() {
@@ -34,7 +33,7 @@ export class LoginComponent implements OnInit {
     window.location.reload();
   }
 
-  omit_special_char_email(event: any) {
+  omit_special_char_email(event) {
     var k;
     k = event.charCode; //
     if (/^[ ]{1,50}$/.test(event.key)) {
@@ -63,7 +62,7 @@ export class LoginComponent implements OnInit {
     this.accountBlur = false;
   }
 
-  change_specific_alias_email(alias: any) {
+  change_specific_alias_email(alias) {
     var str = alias;
     str = str.replace(
       /Ă |Ă¡|áº¡|áº£|Ă£|Ă¢|áº§|áº¥|áº­|áº©|áº«|Äƒ|áº±|áº¯|áº·|áº³|áºµ/g,

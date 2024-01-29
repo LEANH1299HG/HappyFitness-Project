@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { AuthService } from "../../services/auth.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -37,7 +36,7 @@ export class SignupComponent implements OnInit {
   accountBlur: boolean;
   emailBlur: boolean;
   emailExist = false;
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
@@ -48,29 +47,6 @@ export class SignupComponent implements OnInit {
   }
 
   signUp() {
-    this.reinput = !this.verifyPassword();
-    //check validate password and repassword
-    if (this.pwd && this.validatePassword(this.pwd) && this.isChecked && !this.reinput) {      
-      var reqBody = {
-        username: this.account_name,
-        first_name: this.first_name,
-        last_name: this.last_name,
-        email: this.account_email,
-        password: this.pwd,
-        phone_number: this.tel,
-        gender: this.gender == "Nam" ? "Male" : "Female",
-        role: "CUSTOMER",
-      };      
-      this.authService.register(reqBody).subscribe({
-        next: () => {
-          // Đăng ký thành công
-          this.isRegistered = true;
-          // Chuyển hướng sang trang Home và truyền thông báo thành công
-          this.router.navigate(["/login"], { queryParams: { success: true } });
-        },
-        error: () => { },
-      });
-    }
   }
 
   omit_special_char_email(event) {

@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { AuthService } from "../../services/auth.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -23,7 +22,7 @@ export class ChangePassComponent implements OnInit {
   repwd: string;
   changeError = false;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
@@ -36,20 +35,20 @@ export class ChangePassComponent implements OnInit {
 
 
   changePass() {
-    this.authService.changePass(this.account_name, this.pwd).subscribe({
-      next: (res) => {
-        this.router.navigate(["/home"]);
-        if (res.data.role == "admin") {
-          this.router.navigate(["detail/dashboard"]);
-        } else {
-          this.router.navigate(["/home"]);
-        }
-      }, // nextHandler
-      error: (err) => {
-        this.changeError = true;
-        console.log(err);
-      }, // errorHandler
-    });
+    // this.authService.changePass(this.account_name, this.pwd).subscribe({
+    //   next: (res) => {
+    //     this.router.navigate(["/home"]);
+    //     if (res.data.role == "admin") {
+    //       this.router.navigate(["detail/dashboard"]);
+    //     } else {
+    //       this.router.navigate(["/home"]);
+    //     }
+    //   }, // nextHandler
+    //   error: (err) => {
+    //     this.changeError = true;
+    //     console.log(err);
+    //   }, // errorHandler
+    // });
   }
 
   omit_special_char_email(event) {
