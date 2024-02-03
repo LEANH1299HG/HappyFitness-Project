@@ -10,18 +10,16 @@
       <span></span>
       <span></span>
     </div>
-    <div class="container pt-lg-md">
+    <div class="container">
       <div class="row column-center">
-        <div class="col-lg-5">
+        <div class="col-lg-5 setting-aut-page">
               <div class="text-center text-muted mb-4">
-                <small>Vui lòng nhập Email để nhận mật khẩu mới:</small>
+                <div class="title-page">Vui lòng nhập Email để nhận mật khẩu mới:</div>
               </div>
               <form role="form">
                 <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
                   <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                    </div>
+                     
                     <input #account id="account" (keypress)="omit_special_char_email($event)"
                       (blur)="changeHandler('account')" (focus)="focusAccount()" placeholder="name@email.com"
                       type="text" aria-describedby="email-help" maxlength="50" [(ngModel)]="account_name">

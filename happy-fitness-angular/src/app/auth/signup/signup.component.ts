@@ -33,6 +33,7 @@ export class SignupComponent implements OnInit {
   first_name = "";
   last_name = "";
   gender: any;
+  phone: any;
   accountBlur: boolean;
   emailBlur: boolean;
   emailExist = false;
@@ -67,6 +68,13 @@ export class SignupComponent implements OnInit {
       );
     }
     if (name == "email") {
+      this.account_email = this.change_specific_alias_email(
+        this.account_email
+          ? this.account_email.toString().trim().replace(/  +/g, " ")
+          : ""
+      );
+    }
+    if (name == "phone") {
       this.account_email = this.change_specific_alias_email(
         this.account_email
           ? this.account_email.toString().trim().replace(/  +/g, " ")
