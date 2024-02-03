@@ -14,6 +14,8 @@ export class SignupComponent implements OnInit {
   @ViewChild("account", { static: false }) accountElement: ElementRef;
   @ViewChild("firstname", { static: false }) firstnameElement: ElementRef;
   @ViewChild("lastname", { static: false }) lastnameElement: ElementRef;
+  @ViewChild("birthday", { static: false }) bodElement: ElementRef;
+  @ViewChild("addresss", { static: false }) addressElement: ElementRef;
 
   isChecked: boolean = false;
   isRegistered: boolean = false;
@@ -32,8 +34,10 @@ export class SignupComponent implements OnInit {
   account_email: any;
   first_name = "";
   last_name = "";
+  bod: any;
   gender: any;
   phone: any;
+  address: any;
   accountBlur: boolean;
   emailBlur: boolean;
   emailExist = false;

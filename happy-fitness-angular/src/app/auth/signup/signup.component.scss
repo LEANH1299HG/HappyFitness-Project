@@ -1,8 +1,9 @@
-.margin0{
+.margin0 {
     display: flex;
     margin-bottom: 0 !important;
 }
-.error{
+
+.error {
     font-size: 11px;
     color: #ff0000;
     float: left;
@@ -16,17 +17,17 @@
     align-items: center;
     height: 100vh;
     margin-left: -10rem;
-  }
-  
-  .title-page {
+}
+
+.title-page {
     font-family: 'Roboto Slab', serif;
     font-size: 45px;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     color: #373737;
     font-weight: 900;
-  }
-  
-  .btn-color {
+}
+
+.btn-color {
     background-color: #AC1929;
     border-radius: 15px;
     width: 383px;
@@ -36,21 +37,29 @@
     padding: 7px;
     font-weight: 700;
     font-family: 'Roboto Slab', serif;
-  }
-  
-  .input-auth-page {
+}
+
+.input-auth-page {
     width: 383px;
-  }
-  
-  .hightlight {
+}
+
+.hightlight {
     color: #0F3DDE;
     font-weight: 500;
     cursor: pointer;
-  }
-  
-  .forgot-pass-title {
+}
+
+.forgot-pass-title {
     text-align: start;
     color: #0F3DDE;
     font-weight: 500;
     cursor: pointer;
-  }
+}
+
+.height-fix {
+    height: 2rem;
+}
+
+.form-group{
+    margin-bottom: 0.5rem;
+}
