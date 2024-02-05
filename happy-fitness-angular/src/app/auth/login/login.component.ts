@@ -28,6 +28,10 @@ export class LoginComponent implements OnInit {
   login() {
   }
 
+  signUp(){
+    this.router.navigate(["/register"]);
+  }
+
   clearCache() {
     // Reload the page to clear browser cache
     window.location.reload();

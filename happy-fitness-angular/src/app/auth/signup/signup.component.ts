@@ -54,6 +54,10 @@ export class SignupComponent implements OnInit {
   signUp() {
   }
 
+  signIn() {
+    this.router.navigate(["/login"]);
+  }
+
   omit_special_char_email(event) {
     var k;
     k = event.charCode; //

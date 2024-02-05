@@ -4,7 +4,7 @@
       <div class="row column-center">
         <div class="col-lg-5 setting-auth-page">
           <div class="text-center text-muted mb-4">
-            <div class="title-page">Đăng Nhập</div>
+            <div class="title-page">Đăng Ký</div>
           </div>
           <form role="form">
             <div class="input-title" style="color: #000;">
@@ -42,11 +42,12 @@
             <div class="input-title" style="color: #000;">
               Ngày sinh
             </div>
-            <div class="form-group" >
+            <div class="form-group">
               <div class="input-group input-group-alternative mb-3">
-                <input class="form-control height-fix" #birthday id="birthday"
-                   placeholder="01/01/2000" type="text"
-                  aria-describedby="email-help" maxlength="50" [(ngModel)]="bod">
+                <input class="form-control height-fix" #birthday id="birthday" 
+                       placeholder="Chọn ngày sinh" type="date" 
+                       aria-describedby="email-help" [(ngModel)]="bod">
+                
               </div>
             </div>
             <div class="input-title" style="color: #000;">
@@ -135,7 +136,7 @@
             </div>
             <div class="text-center">
               <button type="button" class="btn btn-color" (click)="signUp()">Đăng ký</button>
-              <div style="text-align: center; color: #000;">Đã có tài khoản? <span class="hightlight" href="/login">Đăng nhập</span> ngay</div>
+              <div style="text-align: center; color: #000;">Đã có tài khoản? <span class="hightlight" (click)="signIn()">Đăng nhập</span> ngay</div>
             </div>
           </form>
         </div>
