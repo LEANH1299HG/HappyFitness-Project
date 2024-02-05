@@ -1,54 +1,68 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: "app-change-password",
-  templateUrl: "./change-password.component.html",
-  styleUrls: ["./change-password.component.css"],
+  selector: 'app-change-password',
+  templateUrl: './change-password.component.html',
+  styleUrls: ['./change-password.component.css']
 })
 export class ChangePassComponent implements OnInit {
-  @ViewChild("account") accountElement: any;
   @ViewChild("password", { static: false }) password: ElementRef;
   @ViewChild("repassword", { static: false }) re_password: ElementRef;
 
   focus;
   focus1;
-  focus2;
-  focus4;
-  focus3;
   account_name: any;
   accountBlur = false;
-  pwd: string;
-  repwd: string;
-  changeError = false;
+  emailBlur: boolean;
+  account_email: string;
+  pwd: any;
+  repwd: any;
+  emailExist = false;
+  buttonTitle = 'Lưu';
+  keyCode: any;
 
-  constructor(private router: Router) { }
+  constructor(
+    // private authService: AuthService
+    private router: Router
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
 
-  validatePassword(password: string): boolean {
-    const pattern =
-      "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$";
-    const regex = new RegExp(pattern);
-    return regex.test(password);
   }
 
+  getNewPassword() {
+    // this.authService.forgotPass(this.account_name, this.password).subscribe(
+    //   res => {
+    //     // Nếu đăng nhập thành công, chuyển hướng đến trang chủ
+    //     if (res) {
+    //       this.router.navigate(['/home']);
+    //       // if(res.data.role == 'admin'){
+    //       //   this.router.navigate(['deatail/dashboard']);
+    //       // } else {
+    //       //   this.router.navigate(['/home']);
+    //       // }
 
-  changePass() {
-    // this.authService.changePass(this.account_name, this.pwd).subscribe({
-    //   next: (res) => {
-    //     this.router.navigate(["/home"]);
-    //     if (res.data.role == "admin") {
-    //       this.router.navigate(["detail/dashboard"]);
-    //     } else {
-    //       this.router.navigate(["/home"]);
     //     }
-    //   }, // nextHandler
-    //   error: (err) => {
-    //     this.changeError = true;
-    //     console.log(err);
-    //   }, // errorHandler
-    // });
+    //   },
+    //   error => {
+    //     // Xử lý lỗi đăng nhập
+    //     console.log(error);
+    //   }
+    // );
+  }
+
+  verifyPassword(): boolean {
+    const password = this.pwd;
+    const repassword = this.repwd;
+    return password === repassword;
+  }
+
+  signUp() {
+  }
+
+  signIn() {
+    this.router.navigate(["/login"]);
   }
 
   omit_special_char_email(event) {
@@ -68,17 +82,22 @@ export class ChangePassComponent implements OnInit {
           : ""
       );
     }
+    if (name == "email") {
+      this.account_email = this.change_specific_alias_email(
+        this.account_email
+          ? this.account_email.toString().trim().replace(/  +/g, " ")
+          : ""
+      );
+    }
+    if (name == "phone") {
+      this.account_email = this.change_specific_alias_email(
+        this.account_email
+          ? this.account_email.toString().trim().replace(/  +/g, " ")
+          : ""
+      );
+    }
   }
 
-  clearAccount() {
-    this.accountBlur = false;
-    this.account_name = "";
-    this.accountElement.nativeElement.focus();
-  }
-
-  focusAccount() {
-    this.accountBlur = false;
-  }
 
   change_specific_alias_email(alias) {
     var str = alias;
@@ -136,4 +155,15 @@ export class ChangePassComponent implements OnInit {
     str = str.trim();
     return str;
   }
+
+  validatePassword(password: string): boolean {
+    const pattern =
+      "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$";
+    const regex = new RegExp(pattern);
+    return regex.test(password);
+  }
+
+  sendRequest(){
+  }
+
 }

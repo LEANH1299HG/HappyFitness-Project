@@ -14,7 +14,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { GoogleMapsModule } from "@angular/google-maps";
 import { AppComponent } from "./app.component";
-import { IntroductionComponent } from "./introduction/introduction.component";
+import { IntroductionComponent } from "./introduction/home/introduction.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { ForgotPWComponent } from "./auth/forgot-password/forgot-pw.component";
 import { SignupComponent } from "./auth/signup/signup.component";
