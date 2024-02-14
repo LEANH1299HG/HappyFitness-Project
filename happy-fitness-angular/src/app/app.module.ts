@@ -20,6 +20,10 @@ import { ForgotPWComponent } from "./auth/forgot-password/forgot-pw.component";
 import { SignupComponent } from "./auth/signup/signup.component";
 import { ChangePassComponent } from "./auth/change-password/change-password.component";
 import { SupportHelpComponent } from "./auth/support-help/support.component";
+import { FooterComponent } from "./shared/footer/footer.component";
+import { SidebarComponent } from "./shared/sidebar/sidebar.component";
+import { NavbarCustomerComponent } from "./shared/navbar-customer/navbar-customer.component";
+import { NavbarComponent } from "./shared/navbar/navbar.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -32,6 +36,10 @@ import { SupportHelpComponent } from "./auth/support-help/support.component";
     SignupComponent,
     ChangePassComponent,
     SupportHelpComponent,
+    NavbarComponent,
+    NavbarCustomerComponent,
+    SidebarComponent,
+    FooterComponent,
   ],
   imports: [
     NgbModule,
@@ -59,4 +67,4 @@ import { SupportHelpComponent } from "./auth/support-help/support.component";
   entryComponents: [],
   exports: [],
 })
-export class AppModule {}
+export class AppModule { }

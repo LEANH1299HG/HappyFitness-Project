@@ -2,35 +2,27 @@
   <div class="position-relative">
     <!-- shape Hero -->
     <section class="section section-lg section-shaped pb-250">
-      <div class="shape shape-style-1 shape-default">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <div class="container py-lg-md d-flex">
         <div class="col px-0">
           <div class="row">
             <div class="col-lg-6">
-              <h1 class="display-3  text-white">Dịch vụ vệ sinh
+              <h1 class="display-3  text-white">Make your spring special with top notch fitness.
                 <!-- <span>completed with examples</span> -->
               </h1>
-              <p class="lead  text-white">Dịch vụ vệ sinh của HMS có đa dạng các loại hình tiện ích, hình thức phù hợp
-                cho nhu cầu dọn dẹp của khách hàng.</p>
+              <p class="lead  text-white">Dịch vụ của chúng tôi sử dụng công nghệ AI tiên tiến để tạo ra trải nghiệm tập
+                luyện cá nhân hóa tối ưu.</p>
               <div class="btn-wrapper">
-                <a [routerLink]="['/register']" class="btn btn-info btn-icon mb-3 mb-sm-0">
-                  <span class="btn-inner--icon"><i class="fa fa-task"></i></span>
-                  <span class="btn-inner--text">Đặt dịch vụ vệ sinh</span>
+                <a routerLinkActive="active" [routerLink]="['/register']" class="btn btn-register">
+                  <span class="btn-inner--icon">
+                    <i class="fa fa-key mr-2"></i>
+                  </span>
+                  <span class="nav-link-inner--text">ĐĂNG KÝ</span>
                 </a>
-                <a [routerLink]="['/register']" class="btn btn-white btn-icon mb-3 mb-sm-0">
-                  <span class="btn-inner--icon"><i class="ni ni-calendar-grid-58"></i></span>
-                  <span class="btn-inner--text">Sử dụng định kỳ</span>
-                </a>
+                <span [routerLink]="['/register']" style="width: 200px; height: 50px; margin-left: 2rem;">
+                  <img src="../assets/img/play-video.png">
+                  <span class="btn-inner--text" style="color: #3734A9; font-weight: 600; font-size: 17px;">See How It
+                    Works</span>
+                </span>
               </div>
             </div>
           </div>

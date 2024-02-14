@@ -24,12 +24,9 @@ var navbarHeight = 0;
 })
 export class AppComponent implements OnInit {
   private _router: Subscription;
-  adminNavbar = false;
-  cleanerNavbar = false;
-  customerNavbar = false;
-  guestNavbar = false;
+  customerNavbar = true;
+  guestNavbar = true;
   managerNavbar = false;
-  leadNavbar = false;
   isAuthenticated = false;
   isAuthenticated$: Observable<boolean>;
   username: any;
@@ -41,7 +38,7 @@ export class AppComponent implements OnInit {
     @Inject(DOCUMENT) private document: any,
     private element: ElementRef,
     public location: Location
-  ) {}
+  ) { }
   @HostListener("window:scroll", ["$event"])
   hasScrolled() {
     var st = window.pageYOffset;
@@ -73,7 +70,7 @@ export class AppComponent implements OnInit {
 
     lastScrollTop = st;
   }
-  ngOnInit() {   
+  ngOnInit() {
     var navbar: HTMLElement =
       this.element.nativeElement.children[0].children[0];
     this._router = this.router.events
