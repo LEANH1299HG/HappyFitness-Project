@@ -10,3 +10,35 @@
     background-color: #F35047;
     color: #FFFFFF;
 }
+
+.title-descriptions {
+    margin-top: 5rem !important;
+    width: 600px;
+
+    h1 {
+        font-size: 60px;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .lead {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.img-introduction {
+    width: 50rem;
+    max-width: 710px;
+    height: 45rem;
+    max-height: 660px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 10rem;
+    margin-left: 10rem;
+}

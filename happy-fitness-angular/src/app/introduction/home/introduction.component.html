@@ -1,33 +1,42 @@
 <main>
   <div class="position-relative">
     <!-- shape Hero -->
-    <section class="section section-lg section-shaped pb-250">
-      <div class="container py-lg-md d-flex">
-        <div class="col px-0">
-          <div class="row">
-            <div class="col-lg-6">
-              <h1 class="display-3  text-white">Make your spring special with top notch fitness.
-                <!-- <span>completed with examples</span> -->
-              </h1>
-              <p class="lead  text-white">Dịch vụ của chúng tôi sử dụng công nghệ AI tiên tiến để tạo ra trải nghiệm tập
-                luyện cá nhân hóa tối ưu.</p>
-              <div class="btn-wrapper">
-                <a routerLinkActive="active" [routerLink]="['/register']" class="btn btn-register">
-                  <span class="btn-inner--icon">
-                    <i class="fa fa-key mr-2"></i>
+    <section class="section">
+      <div class="section-intro">
+        <div class="container py-lg-md d-flex">
+          <div class="col px-0">
+            <div class="row">
+              <div class="col-lg-8 title-descriptions">
+                <h1 class="display-3">Make your spring special with top notch fitness.
+                  <!-- <span>completed with examples</span> -->
+                </h1>
+                <p class="lead">Dịch vụ của chúng tôi sử dụng công nghệ AI tiên tiến để tạo ra trải nghiệm
+                  tập
+                  luyện cá nhân hóa tối ưu.</p>
+                <div class="btn-wrapper">
+                  <a routerLinkActive="active" [routerLink]="['/register']" class="btn btn-register">
+                    <span class="btn-inner--icon">
+                      <i class="fa fa-key mr-2"></i>
+                    </span>
+                    <span class="nav-link-inner--text">ĐĂNG KÝ</span>
+                  </a>
+                  <span [routerLink]="['/register']" style="width: 200px; height: 50px; margin-left: 2rem;">
+                    <img src="../assets/img/play-video.png">
+                    <span class="btn-inner--text" style="color: #3734A9; font-weight: 600; font-size: 17px;">See How It
+                      Works</span>
                   </span>
-                  <span class="nav-link-inner--text">ĐĂNG KÝ</span>
-                </a>
-                <span [routerLink]="['/register']" style="width: 200px; height: 50px; margin-left: 2rem;">
-                  <img src="../assets/img/play-video.png">
-                  <span class="btn-inner--text" style="color: #3734A9; font-weight: 600; font-size: 17px;">See How It
-                    Works</span>
-                </span>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="btn-wrapper">
+                  <img class="img-introduction" src="assets/img/introduction.png">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- SVG separator -->
       <div class="separator separator-bottom separator-skew">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
@@ -38,79 +47,14 @@
     </section>
     <!-- 1st Hero Variation -->
   </div>
-  <section class="section section-lg pt-lg-0 mt--200">
+  <section class="section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="row row-grid">
-            <div class="col-lg-4">
-              <div class="card card-lift--hover shadow border-0">
-                <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                    <i class="ni ni-check-bold"></i>
-                  </div>
-                  <h6 class="text-primary text-uppercase">Khu vực vệ sinh</h6>
-                  <p class="description mt-3">Dịch vụ được lựa chọn theo các tiêu chí liên quan tới diện tích, khu vực
-                    dọn dẹp.</p>
-                  <div>
-                    <span class="badge badge-pill badge-primary">Tổng vệ sinh</span>
-                    <span class="badge badge-pill badge-primary">Phòng ngủ</span>
-                    <span class="badge badge-pill badge-primary">Phòng khách</span>
-                    <span class="badge badge-pill badge-primary">Phòng bếp</span>
-                    <span class="badge badge-pill badge-primary">Phòng thờ</span>
-                    <span class="badge badge-pill badge-primary">Nhà vệ sinh</span>
-                    <span class="badge badge-pill badge-primary">. . .</span>
-                  </div>
-                  <a href="javascript:void(0)" class="btn btn-primary mt-4">Thông tin chi tiết</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card card-lift--hover shadow border-0">
-                <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                    <i class="ni ni-istanbul"></i>
-                  </div>
-                  <h6 class="text-success text-uppercase">Hình thức sử dụng dịch vụ</h6>
-                  <p class="description mt-3">Là các loại hình thức dịch vụ được phân bổ bởi tiêu chí theo thời gian: Sử
-                    dụng dịch vụ trong ngày, Dịch vụ vệ sinh đặt trước hoặc Dịch vụ vệ sinh định kỳ.</p>
-                  <div>
-                    <span class="badge badge-pill badge-success">Dịch vụ trong ngày</span>
-                    <span class="badge badge-pill badge-success">Dịch vụ định kỳ</span>
-                  </div>
-                  <a href="javascript:void(0)" class="btn btn-success mt-4">Thông tin chi tiết</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card card-lift--hover shadow border-0">
-                <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
-                    <i class="ni ni-planet"></i>
-                  </div>
-                  <h6 class="text-warning text-uppercase">Dịch vụ tiện ích bổ sung</h6>
-                  <p class="description mt-3">Dịch vụ tiện ích sẽ bao gồm các loại tiện ích lau dọn và vệ sinh vật dụng,
-                    khu vực riêng.</p>
-                  <div>
-                    <span class="badge badge-pill badge-warning">Vệ sinh tủ lạnh</span>
-                    <span class="badge badge-pill badge-warning">Vệ sinh máy giặt</span>
-                    <span class="badge badge-pill badge-warning">Vệ sinh điều hòa</span>
-                    <span class="badge badge-pill badge-warning">Dọn vườn</span>
-                    <span class="badge badge-pill badge-warning">. . .</span>
-                  </div>
-                  <a href="javascript:void(0)" class="btn btn-warning mt-4">Thông tin chi tiết</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src="assets">
     </div>
   </section>
   <section class="section">
     <div class="container">
       <div class="row row-grid align-items-center">
-
         <div class="col-lg-9 order-lg-1">
           <div class="d-flex px-3">
             <div class="pl-4">
