@@ -24,6 +24,7 @@ import { FooterComponent } from "./shared/footer/footer.component";
 import { SidebarComponent } from "./shared/sidebar/sidebar.component";
 import { NavbarCustomerComponent } from "./shared/navbar-customer/navbar-customer.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
+import { CommonModule } from '@angular/common';
 
 // import { FormsModule } from '@angular/forms';
 
@@ -53,6 +54,7 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
     BrowserAnimationsModule,
     MatTabsModule,
     MatIconModule,
+    CommonModule,
     ToastrModule.forRoot({
       timeOut: 30000, // 15 seconds
       closeButton: true,

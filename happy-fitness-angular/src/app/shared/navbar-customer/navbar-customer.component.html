@@ -4,9 +4,9 @@
   style="padding-top: 0px !important;">
   <div class="container-menu">
     <a class="navbar-brand" [routerLink]="['/home']">
-      <img src="./assets/img/brand/fitnesshappy.png">
+      <img alt="" src="./assets/img/brand/fitnesshappy.png">
     </a>
-    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+    <button type="button" aria-label="Close modal" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
       [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,11 +15,11 @@
         <div class="row">
           <div class="col-6 collapse-brand">
             <a [routerLink]="['/home']">
-              <img src="./assets/img/brand/blue.png">
+              <img alt="" src="./assets/img/brand/blue.png">
             </a>
           </div>
           <div class="col-6 collapse-close">
-            <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
+            <button type="button" aria-label="Close modal" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
               [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
               <span></span>
               <span></span>
@@ -190,7 +190,7 @@
             <div class="media align-items-center">
 
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg">
+                <img alt="" alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg">
               </span>
               <div class="media-body ml-2 d-none d-lg-block">
                 <span class="mb-0 text-sm  font-weight-bold">{{username}}</span>

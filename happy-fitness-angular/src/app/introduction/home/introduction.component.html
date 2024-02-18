@@ -6,7 +6,7 @@
         <div class="container py-lg-md d-flex">
           <div class="col px-0">
             <div class="row">
-              <div class="col-lg-8 title-descriptions">
+              <div class="col-lg-6 title-descriptions">
                 <h1 class="display-3">Make your spring special with top notch fitness.
                   <!-- <span>completed with examples</span> -->
                 </h1>
@@ -21,15 +21,15 @@
                     <span class="nav-link-inner--text">ĐĂNG KÝ</span>
                   </a>
                   <span [routerLink]="['/register']" style="width: 200px; height: 50px; margin-left: 2rem;">
-                    <img src="../assets/img/play-video.png">
+                    <img alt="" src="/assets/img/play-video.png">
                     <span class="btn-inner--text" style="color: #3734A9; font-weight: 600; font-size: 17px;">See How It
                       Works</span>
                   </span>
                 </div>
               </div>
-              <div class="col-lg-4">
+              <div class="col-lg-6">
                 <div class="btn-wrapper">
-                  <img class="img-introduction" src="assets/img/introduction.png">
+                  <img alt="" class="img-introduction" src="assets/img/introduction.png">
                 </div>
               </div>
             </div>
@@ -49,84 +49,145 @@
   </div>
   <section class="section">
     <div class="container">
-      <img src="assets">
+      <img class="frame_3" alt="" src="assets/img/Frame 3.png">
     </div>
   </section>
   <section class="section">
     <div class="container">
       <div class="row row-grid align-items-center">
-        <div class="col-lg-9 order-lg-1">
-          <div class="d-flex px-3">
-            <div class="pl-4">
-              <h4 class="display-3">Điểm đặc biệt và tính đa dạng của dịch vụ </h4>
-              <p class="">Dịch vụ vệ sinh của HMS đem tới không chỉ là sự đa dạng trong hình thức sử dụng cũng như vô số
-                tính năng để người dùng lựa chọn</p>
+        <div class="col px-0">
+          <div class="d-flex">
+            <h4 class="display-3">Hot Gym</h4>
+            <div class="col-lg-10 text-right py-lg-3">
+              <a style="width: 85px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                [ngClass]="{'btn-green':value=='default', 'btn-white':value !='default'}"
+                (click)="selectedOption('default')">
+                <span class="nav-link-inner--text">Default</span>
+              </a>
+              <a style="width: 50px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                [ngClass]="{'btn-green':value=='az', 'btn-white':value !='az'}" (click)="selectedOption('az')">
+                <span class="nav-link-inner--text">A-Z</span>
+              </a>
+              <a style="width: 100px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                [ngClass]="{'btn-green':value=='listview', 'btn-white':value !='listview'}"
+                (click)="selectedOption('listview')">
+                <span class="nav-link-inner--text">List view</span>
+              </a>
             </div>
           </div>
-          <div class="card shadow shadow-lg--hover mt-5">
-            <div class="card-body">
-              <div class="d-flex px-3">
-                <div>
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-satisfied"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-success">Lịch trình thời gian</h5>
-                  <p>Hệ thống sẽ có 1 lịch trình hiển thị rõ ràng như 1 thời khóa biểu, người dùng cũng như cleaner đều
-                    dễ dàng tiếp cận và nắm bắt.</p>
+          <div class="mt-5">
+            <div class="row">
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 5.png">
 
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>California Fitness & Yoga</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>222 phố Trung Kính, Cầu Giấy, Hà Nội. </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="card shadow shadow-lg--hover mt-5">
-            <div class="card-body">
-              <div class="d-flex px-3">
-                <div>
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-satisfied"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-success">Tính chất công việc</h5>
-                  <p>Công việc không chỉ dừng ở dọn dẹp cơ bản. Dịch vụ còn cung cấp tới cho khách hàng việc làm sạch
-                    từng chi tiết nhỏ nhất với quy trình chuyên nghiệp.</p>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 6.png">
 
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Elite Fitness</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>235 Trần Hưng Đạo, Hai Bà Trưng, HN</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="card shadow shadow-lg--hover mt-5">
-            <div class="card-body">
-              <div class="d-flex px-3">
-                <div>
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-satisfied"></i>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Golden Wellness Fitness & Spa</h5>
+                      <h6>$30 / tháng</h6>
+                      <p>58 Nguyễn Trãi, Thanh Xuân, HN</p>
+                    </div>
                   </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-success">Đội ngũ chuyên nghiệp</h5>
-                  <p>Dịch vụ có thể cung cấp từ 1 cho tới nhiều nhân viên, hộ trợ và phân công một cách tối ưu và đảm
-                    bảo chất lượng tốt nhất.</p>
-
                 </div>
               </div>
+
+              <!-- Thêm các thẻ card khác tương tự -->
+              <!-- Số lượng card trên mỗi hàng là 3 -->
             </div>
-          </div>
-          <div class="card shadow shadow-lg--hover mt-5">
-            <div class="card-body">
-              <div class="d-flex px-3">
-                <div>
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-satisfied"></i>
+
+            <!-- Thêm một hàng mới -->
+            <div class="row">
+              <!-- Các thẻ card tiếp theo sẽ được hiển thị trên hàng thứ hai -->
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 5.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>California Fitness & Yoga</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>222 phố Trung Kính, Cầu Giấy, Hà Nội. </p>
+                    </div>
                   </div>
                 </div>
-                <div class="pl-4">
-                  <h5 class="title text-success">Nhận thông báo và cập nhật tình hình</h5>
-                  <p>HMS luôn luôn cập nhật thông tin một cách nhanh nhất và đầy đủ nhất không chỉ về thời gian và còn
-                    cả quá trình sử dụng dịch vụ.</p>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 6.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Elite Fitness</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>235 Trần Hưng Đạo, Hai Bà Trưng, HN</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 7.png">
 
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Golden Wellness Fitness & Spa</h5>
+                      <h6>$30 / tháng</h6>
+                      <p>58 Nguyễn Trãi, Thanh Xuân, HN</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -144,285 +205,42 @@
   </section>
   <section class="section">
     <div class="container">
-      <div class="row mb-lg-5">
-        <div class="col-lg-8">
-          <h2 class="display-3">Tin tưởng chất lượng sản phẩm</h2>
-          <p class="lead text-muted">Không chỉ là những tiện nghi tới từ phía hệ thống, dịch vụ còn đem tới chất lượng
-            cho sản phẩm.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div>
-            <img src="./assets/img/theme/advance05.png" class=""
-              style="width: 150px; margin-bottom: 20px; margin-bottom: 20px;">
-            <div>
-              <h5 class="title">
-                <span class="d-block mb-1">Tiết kiệm thời gian</span>
-                <small class="h6 text-muted">Nếu bạn muốn hoàn thành khối lượng công việc lớn trong thời gian ngắn, chỉ
-                  cần một lần đặt dịch vụ tổng vệ sinh, bạn sẽ
-                  có ngay đội ngũ nhân viên để xử lý khối công việc đó thay cho bạn.</small>
-              </h5>
+      <div class="row row-grid align-items-center">
+        <div class="col px-0">
+          <div class="mt-5">
+            <div class="row">
+              <div class="col-lg-8 mb-8">
+                <h2>Danh Sách PT Nổi Bật</h2>
+                <p>Hệ thống của chúng tôi giúp bạn lựa chọn được HLV phù hợp
+                  với cơ thể và mục tiêu cá nhân của bạn.</p>
+                <button type="button" (click)="viewAll()">Xem toàn bộ</button>
+              </div>
 
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+              </div>
+
+              <!-- Thêm các thẻ card khác tương tự -->
+              <!-- Số lượng card trên mỗi hàng là 3 -->
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div>
-            <img src="./assets/img/theme/advance06.png" class="" style="width: 150px; margin-bottom: 20px;">
-            <div>
-              <h5 class="title">
-                <span class="d-block mb-1">Không tốn chi phí công cụ dụng cụ</span>
-                <small class="h6 text-muted">Người giúp việc sẽ chuẩn bị đầy đủ dụng cụ khi đến dọn dẹp, bạn không cần
-                  phải chọn thêm bộ dụng cụ như dịch vụ Giúp
-                  việc nhà theo giờ..</small>
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div>
-            <img src="./assets/img/theme/advance03.png" class="" style="width: 150px; margin-bottom: 20px;">
-            <div>
-              <h5 class="title">
-                <span class="d-block mb-1">Giải quyết khối lượng công việc lớn</span>
-                <small class="h6 text-muted">Dịch vụ vệ sinh nhà cửa là giải pháp tối ưu để “đánh tan” khối lượng công
-                  việc quá lớn dàn trải toàn bộ ngôi nhà mà dịch vụ
-                  Giúp việc nhà theo giờ khó có thể đáp ứng được..
-                </small>
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div>
-            <img src="./assets/img/theme/advance07.png" class="" style="width: 150px; margin-bottom: 20px;">
-            <div>
-              <h5 class="title">
-                <span class="d-block mb-1">Cải thiện không gian sống</span>
-                <small class="h6 text-muted">Việc tổng vệ sinh nhà cửa không chỉ giúp đảm bảo môi trường sống luôn an
-                  toàn, sạch sẽ mà còn “phá tan” nơi trú ngụ của
-                  những vi khuẩn gây bệnh..</small>
-              </h5>
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section pb-0" style="padding-top: 0 !important; padding-bottom: 5rem !important;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="d-flex" style="color: #000">
-          <div>
-            <h4 class="display-3">Bảng giá dịch vụ</h4>
-            <p>Bảng giá chỉ tính dựa trên số diện tích dọn dẹp và số nhân viên</p>
-            <p style="font-size: 12px; color: gray;"> Mang tính chất tham khảo không bao gồm
-              các dịch vụ hỗ trợ, tiện ích bổ sung.</p>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="rounded overflow-hidden bootstrap-slider-price">
-            <ngb-carousel class="abc">
-              <ng-template ngbSlide>
-                <div style="display: flex !important;">
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">Nhỏ hơn 20m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">20-30m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">30-40m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                </div>
+            <!-- Thêm một hàng mới -->
+            <div class="row">
+              <!-- Các thẻ card tiếp theo sẽ được hiển thị trên hàng thứ hai -->
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
 
-              </ng-template>
-              <ng-template ngbSlide>
-                <div style="display: flex !important;">
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">40-60m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">60-80m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">80-100m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                </div>
-              </ng-template>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
 
-              <ng-template ngbSlide>
-                <div style="display: flex !important;">
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">100m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">100-130m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                  <div class="card-body slider-price" style="padding-left: 0 !important;">
-                    <div class="pl-4">
-                      <h5 class="title text-warning">Trên 130m2</h5>
-                      <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                        thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                    </div>
-                  </div>
-                </div>
-              </ng-template>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
 
-            </ngb-carousel>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section pb-0" style="padding-top: 0 !important; padding-bottom: 5rem !important;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="d-flex" style="color: #000">
-          <div>
-            <h4 class="display-3">Đội ngũ nhân viên dịch vụ</h4>
-            <p>Bao gồm những nhân viên trực tiếp hoặc được thuê full time cho hệ thống công ty.</p>
-          </div>
-        </div>
-        <div class="col-md-6 order-lg-2 ml-lg-auto">
-          <div>
-            <div class="card-body" style="padding-left: 0 !important;">
-              <div class="d-flex">
-                <div>
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-satisfied"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-success">Xác minh lý lịch</h5>
-                  <p>Nhân viên dọn dẹp được phỏng vấn trực tiếp và trải qua 3 bước kiểm tra lý lịch. Mọi thông tin đều
-                    minh bạch và rõ ràng nhất để người dùng có thể tiếp nhận.</p>
-                </div>
               </div>
             </div>
           </div>
-          <div>
-            <div class="card-body" style="padding-left: 0 !important;">
-              <div class="d-flex">
-                <div>
-                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                    <i class="ni ni-active-40"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-warning">Chất lượng chuyên môn cao</h5>
-                  <p>Đều phải qua được các bài kiểm tra phỏng vấn và thực nghiệm kiểm tra. Mỗi ứng viên đều cần có ít
-                    nhất các tiêu chí riêng và đủ năm kinh nghiệm.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <div>
-            <div class="card-body" style="padding-left: 0 !important;">
-              <div class="d-flex">
-                <div>
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-satisfied"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-success">Được đánh giá tốt</h5>
-                  <p>Chúng tôi thu thập các đánh giá và phản hồi của khách hàng sau mỗi lần dọn dẹp để đảm bảo tất cả
-                    cộng tác viên dọn dẹp
-                    đều có chất lượng tốt nhất.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card-body" style="padding-left: 0 !important;">
-              <div class="d-flex">
-                <div>
-                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                    <i class="ni ni-active-40"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-warning">Thân thiện và lịch sự</h5>
-                  <p>Nhân viên dọn dẹp được đào tạo về chuyên môn, cách ứng xử và giao tiếp với khách hàng để
-                    thời gian dọn dẹp tại nhà khách hàng luôn thoải mái và vui vẻ nhất.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-lg bg-gradient-default">
-    <div class="container">
-      <div class="row text-center justify-content-center">
-        <div class="col-lg-10">
-          <h2 class="display-3 text-white">Phản hồi và đánh giá</h2>
-          <p class="lead text-white">Sau đây là những phản hồi đánh giá chung của các khách hàng đã và đang tiếp tục sử
-            dụng dịch vụ của HMS.</p>
-        </div>
-      </div>
-      <div class="row row-grid mt-5">
-        <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-            <i class="ni ni-settings text-primary"></i>
-          </div>
-          <h5 class="text-white mt-3">Đánh giá 1</h5>
-          <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the
-            card's content.</p>
-        </div>
-        <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-            <i class="ni ni-ruler-pencil text-primary"></i>
-          </div>
-          <h5 class="text-white mt-3">Đánh giá 2</h5>
-          <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the
-            card's content.</p>
-        </div>
-        <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-            <i class="ni ni-atom text-primary"></i>
-          </div>
-          <h5 class="text-white mt-3">Đánh giá 3</h5>
-          <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the
-            card's content.</p>
         </div>
       </div>
     </div>
@@ -432,25 +250,6 @@
         xmlns="http://www.w3.org/2000/svg">
         <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
       </svg>
-    </div>
-  </section>
-
-  <section class="section pt-lg">
-    <div class="container">
-      <div class="card bg-gradient-warning shadow-lg border-0">
-        <div class="p-5">
-          <div class="row align-items-center">
-            <div class="col-lg-8">
-              <h3 class="text-white">Bạn đã sẵn sàng để trải nghiệm dịch vụ?</h3>
-              <p class="lead text-white mt-3">Chúng tôi sẽ cung cấp cho khách hàng 1 trải nghiệm về dịch vụ vệ sinh
-                tuyệt vời nhất.</p>
-            </div>
-            <div class="col-lg-3 ml-lg-auto">
-              <a [routerLink]="['/home']" class="btn btn-lg btn-block btn-white">Đặt dịch vụ ngay</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </main>

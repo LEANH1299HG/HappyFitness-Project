@@ -16,7 +16,7 @@
     width: 600px;
 
     h1 {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: bold;
         font-family: 'Poppins', sans-serif;
     }
@@ -29,16 +29,61 @@
 }
 
 .img-introduction {
-    width: 50rem;
-    max-width: 710px;
-    height: 45rem;
-    max-height: 660px;
+    width: 40rem;
+    max-width: 610px;
+    height: 35rem;
+    max-height: 600px;
 }
 
 .container {
-    width: 100%;
+    width: 1400px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: 10rem;
     margin-left: 10rem;
+}
+
+.frame_3 {
+    width: 1100px;
+}
+
+.btn-white {
+    border-radius: 20px;
+    border-color: #C2C2C2;
+    background-color: #FFFFFF;
+    color: #000 !important;
+    margin-right: 1rem;
+}
+
+
+.btn-green {
+    border-radius: 20px;
+    border-color: #C2C2C2;
+    background-color: #426B1F;
+    color: #FFFFFF !important;
+    margin-right: 1rem;
+}
+
+.imageHotGym {
+    width: 295px;
+}
+
+.text-section {
+    h5 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    h6 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #426B1F;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #6D6D6D;
+    }
 }
