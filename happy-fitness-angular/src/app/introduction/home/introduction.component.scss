@@ -36,11 +36,11 @@
 }
 
 .container {
-    width: 1400px;
+    max-width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    margin-right: 15rem;
+    margin-left: 15rem;
 }
 
 .frame_3 {
@@ -65,7 +65,11 @@
 }
 
 .imageHotGym {
-    width: 295px;
+    width: 335px;
+}
+
+.imageLastestNews {
+    width: 235px;
 }
 
 .text-section {
@@ -86,4 +90,19 @@
         font-weight: 400;
         color: #6D6D6D;
     }
+}
+
+.button-view-all {
+    width: 200px;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: #AC1929;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.imageHotTopic {
+    width: 850px;
+    height: 390px;
 }
