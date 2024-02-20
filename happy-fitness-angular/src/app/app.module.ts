@@ -25,6 +25,7 @@ import { SidebarComponent } from "./shared/sidebar/sidebar.component";
 import { NavbarCustomerComponent } from "./shared/navbar-customer/navbar-customer.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
+import { AboutComponent } from "./introduction/about/about.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -41,6 +42,7 @@ import { CommonModule } from '@angular/common';
     NavbarCustomerComponent,
     SidebarComponent,
     FooterComponent,
+    AboutComponent,
   ],
   imports: [
     NgbModule,

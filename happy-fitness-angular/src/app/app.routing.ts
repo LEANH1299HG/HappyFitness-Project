@@ -8,16 +8,18 @@ import { LoginComponent } from "./auth/login/login.component";
 import { ForgotPWComponent } from "./auth/forgot-password/forgot-pw.component";
 import { ChangePassComponent } from "./auth/change-password/change-password.component";
 import { SupportHelpComponent } from "./auth/support-help/support.component";
+import { AboutComponent } from "./introduction/about/about.component";
 
 
 const routes: Routes = [
 
-  { path: 'register', component: SignupComponent},
-  { path: 'introduction', component: IntroductionComponent},
-  { path: 'login', component: LoginComponent  },
-  { path: 'forgot-password', component: ForgotPWComponent},
-  { path: 'change-password', component: ChangePassComponent},
+  { path: 'register', component: SignupComponent },
+  { path: 'home', component: IntroductionComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'forgot-password', component: ForgotPWComponent },
+  { path: 'change-password', component: ChangePassComponent },
   { path: 'support-help', component: SupportHelpComponent },
+  { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
