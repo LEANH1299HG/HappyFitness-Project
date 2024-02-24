@@ -1,24 +1,31 @@
-<footer *ngIf="footerUser" class="footer" [ngClass]="{'has-cards': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'}">
+<footer *ngIf="footerUser" class="footer" style="padding: 1rem 0 !important"
+  [ngClass]="{'has-cards': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'}">
   <div class="container">
-    <div class="row row-grid align-items-center" [ngClass]="{'my-md': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login', 'mb-5':getPath()==='/user-profile' || getPath()==='/register' || getPath()==='/login'}">
+    <div class="row row-grid align-items-center"
+      [ngClass]="{'my-md': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login', 'mb-5':getPath()==='/user-profile' || getPath()==='/register' || getPath()==='/login'}">
       <div class="col-lg-6">
         <h3 class="text-primary font-weight-light mb-2">Cám ơn các bạn đã ghé thăm!</h3>
-        <h4 class="mb-0" style="font-size: 16px; font-weight: 300;">Hãy để HMS đồng hành cùng các bạn qua mọi dấu mốc trong cuộc sống.</h4>
+        <h4 class="mb-0" style="font-size: 16px; font-weight: 300;">Hãy để Happyfitness đồng hành cùng các bạn qua mọi
+          dấu mốc trong cuộc sống.</h4>
       </div>
       <div class="col-lg-6 text-lg-center btn-wrapper">
-        <a target="_blank" href="https://twitter.com" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" ngbTooltip="Follow us">
+        <a target="_blank" href="https://twitter.com" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg"
+          ngbTooltip="Follow us">
           <i class="fa fa-twitter"></i>
         </a>
-        <a target="_blank" href="https://www.facebook.com" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" ngbTooltip="Join us">
+        <a target="_blank" href="https://www.facebook.com"
+          class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" ngbTooltip="Join us">
           <i class="fas fa-facebook-f"></i>
         </a>
-        <a target="_blank" href="https://instagram.com" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" ngbTooltip="Like us ">
+        <a target="_blank" href="https://instagram.com"
+          class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" ngbTooltip="Like us ">
           <i class="fas fa-instagram"></i>
         </a>
-        <a target="_blank" href="https://youtube.com" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" ngbTooltip="Watch us">
+        <a target="_blank" href="https://youtube.com"
+          class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" ngbTooltip="Watch us">
           <i class="fa fa-youtube"></i>
         </a>
-        
+
       </div>
     </div>
     <hr>
@@ -26,13 +33,13 @@
       <div class="col-md-6">
         <div class="copyright">
           &copy; {{test | date: 'yyyy'}}
-          <a href="" target="_blank">HMS Project</a>.
+          <a href="" target="_blank">Happyfitness Project</a>.
         </div>
       </div>
       <div class="col-md-6">
         <ul class="nav nav-footer justify-content-end">
           <li class="nav-item">
-            <a href="" class="nav-link" target="_blank">HMS-G1 team</a>
+            <a href="" class="nav-link" target="_blank">Happyfitness team</a>
           </li>
           <li class="nav-item">
             <a href="" class="nav-link" target="_blank">About Us</a>
@@ -49,25 +56,123 @@
   </div>
 </footer>
 
-<footer *ngIf="!footerUser" class="footer">
+<footer *ngIf="!footerUser" class="footer" style="padding: 1rem 0 !important">
   <div class="row align-items-center justify-content-xl-between">
-    <div class="col-xl-6">
+    <div class="col-xl-4">
       <div class="copyright text-center text-xl-left text-muted" style="padding-left: 5rem;">
-        &copy; {{ test | date: "yyyy" }} <a href="" class="font-weight-bold ml-1" target="_blank">Dịch vụ dọn dẹp chất lượng hàng đầu</a>
+        <img class="icon-logo" src="assets/img/Logo.png" alt="">
+      </div>
+      <div class="copyright text-center text-xl-left text-muted margin-bottom-1" style="padding-left: 5rem;">
+        <i class="fas fa-map-marker-alt"></i> <a href="" class="font-weight-bold ml-1" target="_blank">8819 Ohio St.
+          South
+          Gate,
+          CA 90280</a>
+      </div>
+      <div class="copyright text-center text-xl-left text-muted margin-bottom-1" style="padding-left: 5rem;">
+        <i class="fab fa-google"></i><a href="" class="font-weight-bold ml-1" target="_blank">Ourstudio@hello.com</a>
+      </div>
+      <div class="copyright text-center text-xl-left text-muted margin-bottom-1" style="padding-left: 5rem;">
+        <i class="fab fa-phone"></i><a href="" class="font-weight-bold ml-1" target="_blank">+1 386-688-3295</a>
       </div>
     </div>
-    <div class="col-xl-6">
-      <ul class="nav nav-footer justify-content-center justify-content-xl-end" style="padding-right: 5rem;">
-        <li class="nav-item">
-          <a href="" class="nav-link" target="_blank">H.S.M</a>
+    <div class="col-xl-8">
+      <ul class="nav nav-footer">
+        <li class="nav-item col-lg-3 copyright text-center text-xl-left text-muted">
+          <a href="#" class="nav-link" target="_blank">Service</a>
         </li>
-        <li class="nav-item">
-          <a href="" class="nav-link" target="_blank">Giới thiệu</a>
+        <li class="nav-item col-lg-3 copyright text-center text-xl-left text-muted">
+          <a href="#" class="nav-link" target="_blank">Company</a>
         </li>
-        <li class="nav-item">
-          <a href="" class="nav-link" target="_blank">Blog</a>
+        <li class="nav-item col-lg-3 copyright text-center text-xl-left text-muted">
+          <a href="#" class="nav-link" target="_blank">Our Social Media</a>
         </li>
-        
+        <li class="nav-item col-lg-3 copyright text-center text-xl-left text-muted">
+          <a href="#" class="nav-link" target="_blank">Join a Newsletter</a>
+        </li>
+      </ul>
+      <ul class="nav nav-footer">
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Illustration</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Service</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Dribble</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Join a Newsletter</a>
+        </li>
+      </ul>
+      <ul class="nav nav-footer">
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Mobile Design</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Features</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Behance</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Your Email</a>
+        </li>
+      </ul>
+      <ul class="nav nav-footer">
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Motion Grapphic</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Our Team</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Medium</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank"></a>
+        </li>
+      </ul>
+      <ul class="nav nav-footer">
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Web Design</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Portfolio</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Instagram</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank"></a>
+        </li>
+      </ul>
+      <ul class="nav nav-footer">
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Development</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Blog</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank"></a>
+        </li>
+      </ul>
+      <ul class="nav nav-footer">
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">SEO</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Contact Us</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Twitter</a>
+        </li>
+        <li class="nav-item col-lg-3">
+          <a href="#" class="nav-link" target="_blank">Copyright Satyam Studio</a>
+        </li>
       </ul>
     </div>
   </div>

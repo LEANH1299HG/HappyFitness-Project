@@ -9,6 +9,7 @@ import { ForgotPWComponent } from "./auth/forgot-password/forgot-pw.component";
 import { ChangePassComponent } from "./auth/change-password/change-password.component";
 import { SupportHelpComponent } from "./auth/support-help/support.component";
 import { AboutComponent } from "./introduction/about/about.component";
+import { ContactComponent } from "./introduction/contact/contact.component";
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'change-password', component: ChangePassComponent },
   { path: 'support-help', component: SupportHelpComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
