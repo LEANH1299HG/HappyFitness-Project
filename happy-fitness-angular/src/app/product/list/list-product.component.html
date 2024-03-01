@@ -1,0 +1,458 @@
+<main>
+  <div class="position-relative">
+    <!-- shape Hero -->
+    <section class="section">
+      <div class="section-intro">
+        <div class="container py-lg-md d-flex">
+          <div class="col px-0">
+            <div class="row">
+              <div class="col-lg-6 title-descriptions">
+                <h1 class="display-3">Make your spring special with top notch fitness.
+                  <!-- <span>completed with examples</span> -->
+                </h1>
+                <p class="lead">Dịch vụ của chúng tôi sử dụng công nghệ AI tiên tiến để tạo ra trải nghiệm
+                  tập
+                  luyện cá nhân hóa tối ưu.</p>
+                <div class="btn-wrapper">
+                  <a routerLinkActive="active" [routerLink]="['/register']" class="btn btn-register">
+                    <span class="btn-inner--icon">
+                      <i class="fa fa-key mr-2"></i>
+                    </span>
+                    <span class="nav-link-inner--text">ĐĂNG KÝ</span>
+                  </a>
+                  <span [routerLink]="['/register']" style="width: 200px; height: 50px; margin-left: 2rem;">
+                    <img alt="" src="/assets/img/play-video.png">
+                    <span class="btn-inner--text" style="color: #3734A9; font-weight: 600; font-size: 17px;">See How It
+                      Works</span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="btn-wrapper">
+                  <img alt="" class="img-introduction" src="assets/img/introduction.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    <!-- 1st Hero Variation -->
+  </div>
+  <section class="section">
+    <div class="container">
+      <img class="frame_3" alt="" src="assets/img/Frame 3.png">
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="row row-grid align-items-center">
+        <div class="col px-0">
+          <div class="d-flex">
+            <h4 class="display-3">Hot Gym</h4>
+            <div class="col-lg-10 text-right py-lg-3">
+              <a style="width: 85px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                [ngClass]="{'btn-green':value=='default', 'btn-white':value !='default'}"
+                (click)="selectedOption('default')">
+                <span class="nav-link-inner--text">Default</span>
+              </a>
+              <a style="width: 50px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                [ngClass]="{'btn-green':value=='az', 'btn-white':value !='az'}" (click)="selectedOption('az')">
+                <span class="nav-link-inner--text">A-Z</span>
+              </a>
+              <a style="width: 100px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                [ngClass]="{'btn-green':value=='listview', 'btn-white':value !='listview'}"
+                (click)="selectedOption('listview')">
+                <span class="nav-link-inner--text">List view</span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-5">
+            <div class="row">
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 5.png">
+
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>California Fitness & Yoga</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>222 phố Trung Kính, Cầu Giấy, Hà Nội. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 6.png">
+
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Elite Fitness</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>235 Trần Hưng Đạo, Hai Bà Trưng, HN</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Golden Wellness Fitness & Spa</h5>
+                      <h6>$30 / tháng</h6>
+                      <p>58 Nguyễn Trãi, Thanh Xuân, HN</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thêm các thẻ card khác tương tự -->
+              <!-- Số lượng card trên mỗi hàng là 3 -->
+            </div>
+
+            <!-- Thêm một hàng mới -->
+            <div class="row">
+              <!-- Các thẻ card tiếp theo sẽ được hiển thị trên hàng thứ hai -->
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 5.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>California Fitness & Yoga</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>222 phố Trung Kính, Cầu Giấy, Hà Nội. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 6.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Elite Fitness</h5>
+                      <h6>$25.99 / tháng</h6>
+                      <p>235 Trần Hưng Đạo, Hai Bà Trưng, HN</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>Golden Wellness Fitness & Spa</h5>
+                      <h6>$30 / tháng</h6>
+                      <p>58 Nguyễn Trãi, Thanh Xuân, HN</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="row row-grid align-items-center">
+        <div class="col px-0">
+          <div class="mt-5">
+            <div class="row">
+              <div class="col-lg-8 mb-8">
+                <h4 class="display-3">Danh sách PT nổi bật</h4>
+                <p>Hệ thống của chúng tôi giúp bạn lựa chọn được HLV phù hợp
+                  với cơ thể và mục tiêu cá nhân của bạn.</p>
+                <button class="button-view-all" type="button" (click)="viewAll()">Xem toàn bộ</button>
+              </div>
+
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+              </div>
+
+              <!-- Thêm các thẻ card khác tương tự -->
+              <!-- Số lượng card trên mỗi hàng là 3 -->
+            </div>
+
+            <!-- Thêm một hàng mới -->
+            <div class="row">
+              <!-- Các thẻ card tiếp theo sẽ được hiển thị trên hàng thứ hai -->
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+
+              </div>
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+
+              </div>
+              <div class="col-lg-4 mb-4">
+                <img class="imageHotGym" alt="" src="assets/img/image 7.png">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="row row-grid align-items-center">
+        <div class="col px-0">
+          <div class="mt-5">
+            <div class="row">
+              <h4 class="display-3">Hot Topics</h4>
+
+            </div>
+            <div class="row">
+              <div class="col-lg-9 mb-9">
+                <img class="imageHotTopic" alt="" src="assets/img/Rectangle 1.png">
+              </div>
+
+              <div class="col-lg-3 mb-3">
+                <p>Trải qua sự nghiên cứu kỹ lưỡng, chúng tôi đã tổng hợp các bài tập hiệu quả cho cả cardio và tăng
+                  cường cơ bắp. Từ bài
+                  tập HIIT năng động đến yoga thư giãn, chúng tôi cung cấp sự đa dạng để phù hợp với mọi đối tượng. Đồng
+                  thời, chúng tôi
+                  sẽ chia sẻ những lợi ích và kỹ thuật thực hiện đúng, giúp bạn tận hưởng hành trình tập luyện một cách
+                  hiệu quả và an
+                  toàn..</p>
+              </div>
+
+              <!-- Thêm các thẻ card khác tương tự -->
+              <!-- Số lượng card trên mỗi hàng là 3 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row row-grid align-items-center">
+        <div class="col px-0">
+          <div class="d-flex">
+            <h4 class="display-3">Lastest News</h4>
+          </div>
+          <div class="mt-5">
+            <div class="row">
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 5.png">
+
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 6.png">
+
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 7.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 7.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thêm các thẻ card khác tương tự -->
+              <!-- Số lượng card trên mỗi hàng là 4-->
+            </div>
+
+            <!-- Thêm một hàng mới -->
+            <div class="row">
+              <!-- Các thẻ card tiếp theo sẽ được hiển thị trên hàng thứ hai -->
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 5.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 6.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 7.png">
+
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageLastestNews" alt="" src="assets/img/image 7.png">
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <h5>News Title Lorem Ipsum Dolor Sit Amet</h5>
+                      <span>1 Hour Ago</span>&nbsp;&nbsp;&nbsp;<span>CNN Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <div class="elfsight-app-2bb20d90-b4b8-4f52-b90a-a2fc00eac7d1" data-elfsight-app-lazy></div>
+
+</main>

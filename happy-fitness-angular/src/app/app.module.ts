@@ -27,6 +27,9 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from "./introduction/about/about.component";
 import { ContactComponent } from "./introduction/contact/contact.component";
+import { EditProductComponent } from "./product/edit/edit-product.component";
+import { CreateProductComponent } from "./product/create/create-product.component";
+import { ListProductComponent } from "./product/list/list-product.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -45,6 +48,9 @@ import { ContactComponent } from "./introduction/contact/contact.component";
     FooterComponent,
     AboutComponent,
     ContactComponent,
+    ListProductComponent,
+    CreateProductComponent,
+    EditProductComponent,
   ],
   imports: [
     NgbModule,

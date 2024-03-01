@@ -10,6 +10,9 @@ import { ChangePassComponent } from "./auth/change-password/change-password.comp
 import { SupportHelpComponent } from "./auth/support-help/support.component";
 import { AboutComponent } from "./introduction/about/about.component";
 import { ContactComponent } from "./introduction/contact/contact.component";
+import { ListProductComponent } from "./product/list/list-product.component";
+import { CreateProductComponent } from "./product/create/create-product.component";
+import { EditProductComponent } from "./product/edit/edit-product.component";
 
 
 const routes: Routes = [
@@ -22,6 +25,9 @@ const routes: Routes = [
   { path: 'support-help', component: SupportHelpComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'list-product', component: ListProductComponent },
+  { path: 'create-product', component: CreateProductComponent },
+  { path: 'edit-product', component: EditProductComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
