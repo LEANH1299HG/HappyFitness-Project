@@ -11,6 +11,9 @@ import { SupportHelpComponent } from "./auth/support-help/support.component";
 import { AboutComponent } from "./introduction/about/about.component";
 import { ContactComponent } from "./introduction/contact/contact.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { ListProductComponent } from "./product/list/list-product.component";
+import { CreateProductComponent } from "./product/create/create-product.component";
+import { EditProductComponent } from "./product/edit/edit-product.component";
 
 
 const routes: Routes = [
@@ -24,6 +27,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'list-product', component: ListProductComponent },
+  { path: 'create-product', component: CreateProductComponent },
+  { path: 'edit-product', component: EditProductComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

@@ -28,6 +28,9 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from "./introduction/about/about.component";
 import { ContactComponent } from "./introduction/contact/contact.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { EditProductComponent } from "./product/edit/edit-product.component";
+import { CreateProductComponent } from "./product/create/create-product.component";
+import { ListProductComponent } from "./product/list/list-product.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -47,6 +50,9 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
     AboutComponent,
     ContactComponent,
     DashboardComponent
+    ListProductComponent,
+    CreateProductComponent,
+    EditProductComponent,
   ],
   imports: [
     NgbModule,
