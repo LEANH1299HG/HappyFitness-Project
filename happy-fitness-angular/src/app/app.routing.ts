@@ -10,6 +10,7 @@ import { ChangePassComponent } from "./auth/change-password/change-password.comp
 import { SupportHelpComponent } from "./auth/support-help/support.component";
 import { AboutComponent } from "./introduction/about/about.component";
 import { ContactComponent } from "./introduction/contact/contact.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'support-help', component: SupportHelpComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

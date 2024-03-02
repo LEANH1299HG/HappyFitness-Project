@@ -1,4 +1,5 @@
-<nav *ngIf="cleanerNavbar || managerNavbar || adminNavbar ||leadNavbar" class="navbar navbar-vertical navbar-expand-md navbar-light bg-white" id="sidenav-main">
+<nav *ngIf="cleanerNavbar || managerNavbar || adminNavbar ||leadNavbar"
+  class="navbar navbar-vertical navbar-expand-md navbar-light bg-white" id="sidenav-main">
   <div class="container-fluid">
     <!-- Toggler -->
     <button class="navbar-toggler" type="button" (click)="isCollapsed=!isCollapsed"
@@ -7,7 +8,7 @@
     </button>
     <!-- Brand -->
     <a class="navbar-brand pt-0" routerLinkActive="active" [routerLink]="['/dashboard']">
-      <img src="./assets/img/brand/red.png" class="navbar-brand-img" alt="...">
+      <img src="assets/img/Logo.png" class="navbar-brand-img" alt="...">
     </a>
     <!-- User -->
     <ul class="nav align-items-center d-md-none">
@@ -98,28 +99,6 @@
           <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link">
             <i class="ni {{menuItem.icon}}"></i>
             {{menuItem.title}}
-          </a>
-        </li>
-      </ul>
-      <!-- Divider -->
-      <hr class="my-3">
-      <!-- Heading -->
-      <h6 class="navbar-heading text-muted">Hỗ trợ</h6>
-      <!-- Navigation -->
-      <ul class="navbar-nav mb-md-3">
-        <li class="nav-item">
-          <a class="nav-link" href="">
-            <i class="ni ni-shop"></i> Trang chủ
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">
-            <i class="ni ni-support-16"></i> Hỗ trợ
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">
-            <i class="fas fa-phone"></i> Liên hệ
           </a>
         </li>
       </ul>
