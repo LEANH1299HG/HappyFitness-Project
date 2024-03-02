@@ -172,3 +172,13 @@
 .mt-1{
     margin-top: 1rem !important;
 }
+
+
+.product_input {
+        width: 100%; /* Ensure the container takes up the full width */
+    }
+
+    .product_ {
+        width: 100%; /* Make the input take up the full width of the container */
+        box-sizing: border-box; /* Include padding and border in the width calculation */
+    }

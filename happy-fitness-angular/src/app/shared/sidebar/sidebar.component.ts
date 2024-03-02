@@ -52,9 +52,38 @@ export class SidebarComponent implements OnInit {
     // }
 
     this.route.url.subscribe(segments => {
-      const currentUrl = segments.join('/');
+      const currentUrl = window.location.href;
+      const baseUrl = "http://localhost:83/hpf";
+      let remainingPath = '';
+      console.log("currentUrl", currentUrl);
+      if (currentUrl.startsWith(baseUrl)) {
+        // Lấy phần sau baseUrl bằng cách sử dụng substr
+        remainingPath = currentUrl.substr(baseUrl.length);
+        if (remainingPath.includes('product')) {
+          remainingPath = '/product';
+        } else if (remainingPath.includes('account')) {
+          remainingPath = '/account';
+        } else if (remainingPath.includes('order')) {
+          remainingPath = '/order';
+        }
+
+        console.log("Phần sau cụm baseUrl:", remainingPath);
+      } else {
+        console.log("Chuỗi URL không chứa cụm baseUrl.");
+      }
+      // if (segments.length > 0) {
+      //   const currentUrl = segments.map(segment => segment.path).join('/');
+      //   console.log("currentUrl", currentUrl);
+      //   console.log("segment", segments);
+      // } else {
+      //   console.log("No segments found in URL");
+      // }
+      // console.log("currentUrl", currentUrl);
+
       if (this.managerNavbar) {
-        this.menuItemsManager = this.setActiveClassManager(ROUTES2, currentUrl);
+        this.menuItemsManager = this.setActiveClassManager(ROUTES2, remainingPath);
+        console.log("this.menuItemsManager", this.menuItemsManager);
+
         this.menuItemsManager = ROUTES2.filter(menuItem => menuItem);
       }
     });
@@ -68,7 +97,11 @@ export class SidebarComponent implements OnInit {
 
   private setActiveClassManager(routes: RouteInfoManager[], currentUrl: string = ''): RouteInfoManager[] {
     return routes.map(route => {
-      route.class = (route.path === currentUrl) ? 'text-primary' : '';
+      route.class = (route.path === currentUrl) ? 'selected-sidebar' : '';
+      if (route.path === currentUrl) {
+        console.log("routes", route);
+      }
+
       return route;
     });
   }

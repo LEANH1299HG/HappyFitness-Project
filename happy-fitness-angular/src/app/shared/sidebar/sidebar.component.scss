@@ -200,7 +200,8 @@
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link
 {
-    padding: .65rem 1.5rem;
+    margin: .65rem 2.5rem;
+        padding: 0.5rem 0.25rem 0.5rem 0.75rem;
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link.active:before
 {
@@ -325,7 +326,8 @@
     }
     .navbar-vertical.navbar-expand-sm .navbar-nav .nav-link
     {
-        padding: .65rem 1.5rem;
+        margin: .65rem 2.5rem;
+        padding: 0.5rem 0.25rem 0.5rem 0.75rem;
     }
     .navbar-vertical.navbar-expand-sm .navbar-nav .nav-link.active:before
     {
@@ -451,7 +453,9 @@
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link
     {
-        padding: .65rem 1.5rem;
+        margin: .65rem 2.5rem;
+        padding: 0.5rem 0.25rem 0.5rem 0.75rem;
+
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link.active:before
     {
@@ -577,7 +581,9 @@
     }
     .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link
     {
-        padding: .65rem 1.5rem;
+        margin: .65rem 2.5rem;
+        padding: 0.5rem 0.25rem 0.5rem 0.75rem;
+
     }
     .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link.active:before
     {
@@ -703,7 +709,9 @@
     }
     .navbar-vertical.navbar-expand-xl .navbar-nav .nav-link
     {
-        padding: .65rem 1.5rem;
+        margin: .65rem 2.5rem;
+        padding: 0.5rem 0.25rem 0.5rem 0.75rem;
+
     }
     .navbar-vertical.navbar-expand-xl .navbar-nav .nav-link.active:before
     {
@@ -813,4 +821,11 @@
     {
         margin-right: 250px;
     }
+}
+
+.selected-sidebar{
+    background-color: #AC1929;
+    border-radius: 16px;
+    color: #e9ecef !important;
+    font-weight: 600;
 }

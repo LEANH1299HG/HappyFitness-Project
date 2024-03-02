@@ -1,14 +1,13 @@
-<nav *ngIf="cleanerNavbar || managerNavbar || adminNavbar ||leadNavbar"
+<nav *ngIf=" managerNavbar || adminNavbar ||leadNavbar"
   class="navbar navbar-vertical navbar-expand-md navbar-light bg-white" id="sidenav-main">
   <div class="container-fluid">
     <!-- Toggler -->
     <button class="navbar-toggler" type="button" (click)="isCollapsed=!isCollapsed"
       aria-controls="sidenav-collapse-main">
-      <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Brand -->
-    <a class="navbar-brand pt-0" routerLinkActive="active" [routerLink]="['/dashboard']">
-      <img src="assets/img/Logo.png" class="navbar-brand-img" alt="...">
+    <a class="" style="margin-left: 2rem;" routerLinkActive="active" [routerLink]="['/dashboard']">
+      <img src="assets/img/Logo.png" class="" style="width: 100px; height: 100px;" alt=" ...">
     </a>
     <!-- User -->
     <ul class="nav align-items-center d-md-none">
@@ -86,18 +85,10 @@
         </div>
       </form>
       <!-- Navigation -->
-      <ul class="navbar-nav" *ngIf="cleanerNavbar">
-        <li *ngFor="let menuItem of menuItemsCleaner" class="{{menuItem.class}} nav-item">
-          <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link">
-            <i class="ni {{menuItem.icon}}"></i>
-            {{menuItem.title}}
-          </a>
-        </li>
-      </ul>
       <ul class="navbar-nav" *ngIf="managerNavbar">
-        <li *ngFor="let menuItem of menuItemsManager" class="{{menuItem.class}} nav-item">
-          <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link">
-            <i class="ni {{menuItem.icon}}"></i>
+        <li *ngFor="let menuItem of menuItemsManager" class="nav-item">
+          <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="{{menuItem.class}}  nav-link">
+            <i class="ni {{menuItem.icon}}" style="margin-right: 0!important;"></i>
             {{menuItem.title}}
           </a>
         </li>

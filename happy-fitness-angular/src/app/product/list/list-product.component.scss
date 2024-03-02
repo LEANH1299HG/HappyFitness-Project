@@ -172,3 +172,24 @@
 .mt-1{
     margin-top: 1rem !important;
 }
+
+.button-action{
+    width: 100%;
+    margin: 1rem 2rem;
+    display: flex;
+    // background-color: #979797;
+    .button-delete{
+        width: 60px;
+        padding: 8px;
+        background-color: #D5D5D5;
+        border-radius: 0 5px 0 0; /* Bo tròn góc trên cùng bên phải */
+        border: 1px solid #979797;
+    }
+    .button-edit{
+        width: 60px;
+        padding: 8px;
+        background-color: #D5D5D5;
+        border-radius: 5px 0 0 0; /* Bo tròn góc trên cùng bên trái */
+        border: 1px solid #979797;
+    }
+}
