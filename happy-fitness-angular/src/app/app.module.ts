@@ -49,7 +49,7 @@ import { ListProductComponent } from "./product/list/list-product.component";
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    DashboardComponent
+    DashboardComponent,
     ListProductComponent,
     CreateProductComponent,
     EditProductComponent,

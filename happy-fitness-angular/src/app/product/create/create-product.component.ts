@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule ở đây
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -21,7 +23,11 @@ export class CreateProductComponent implements OnInit {
   selectedType: string; // Biến lưu trữ loại sanpham được chọn
   productTypes: string[] = ["TypeA", "TypeB", "TypeC"];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private toastr: ToastrService,
+
+  ) { }
 
   ngOnInit() {
     this.value = 'default';
@@ -41,6 +47,7 @@ export class CreateProductComponent implements OnInit {
   }
 
   save() {
-
+    this.toastr.success('Tạo sản phẩm thành công!');
+    this.router.navigate(['/list-product']);
   }
 }
