@@ -1,0 +1,84 @@
+<main>
+
+
+  <section class="section">
+    <div class="container-product">
+      <div class="row row-grid align-items-center">
+        <div class="col px-0">
+          <div class="d-flex mt-3">
+            <h5 class="display-3">Create Product </h5>
+          </div>
+          <div class="mt-3">
+            <div class="row">
+              <div class="col-lg-12 mb-12">
+                <div class="card shadow shadow-lg--hover">
+                  <div class="card-body">
+                    <!-- Phần ảnh -->
+                    <div class="image-section mb-3 text-center">
+                      <!-- Đặt hình ảnh ở đây -->
+                      <img class="imageProduct" alt="" src="assets/img/image.png">
+
+                    </div>
+                    <!-- Phần text -->
+                    <div class="text-section">
+                      <div class="input-group">
+                        <p>Product Name:</p>
+                        <!-- (keypress)="omit_special_char_email($event)" [(ngModel)]="account_name" -->
+                        <!-- (blur)="changeHandler('account')" (focus)="focusAccount()" -->
+                        <div class="product_input">
+                          <input class="product_" id="product_name" placeholder="Product A" type="text"
+                            aria-describedby="account-help" maxlength="50" [(ngModel)]="product_name"
+                            style="width: 100%;">
+                          <p style="width: 90%;" class="error" *ngIf="nameNull">Vui lòng ko để trống thông tin tên</p>
+                        </div>
+
+                      </div>
+                      <div class="input-group">
+                        <p>Brand: </p>
+                        <select [(ngModel)]="selectedType" id="productType" aria-describedby="productType-help"
+                          title="Loại hình nhà">
+                          <option *ngFor="let type of productTypes" [value]="type">{{ type }}</option>
+                        </select>
+                      </div>
+                      <div class="input-group">
+                        <p>Price:</p>
+                        <!-- (keypress)="omit_special_char_email($event)" [(ngModel)]="account_name" -->
+                        <!-- (blur)="changeHandler('account')" (focus)="focusAccount()" -->
+                        <div class="product_input">
+                          <input class="product_" id="product_price" placeholder="Product A" type="text"
+                            aria-describedby="account-help" maxlength="50" [(ngModel)]="product_price">
+                          <p style="width: 90%;" class="error" *ngIf="priceNull">Vui lòng ko để trống thông tin giá tiền
+                          </p>
+                        </div>
+
+                      </div>
+                      <div class="note-section input-group">
+                        <p>Description: </p>
+                        <textarea style="width: 100%;" [(ngModel)]="note" rows="4"
+                          placeholder="Description of product"></textarea>
+                      </div>
+                      <div class="text-center" style="margin-top: 2rem; display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-color-1" (click)="save()">Save Product</button>
+                        <button type="button" class="btn btn-color-2" (click)="cancel()">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+
+  <!-- <div class="elfsight-app-2bb20d90-b4b8-4f52-b90a-a2fc00eac7d1" data-elfsight-app-lazy></div> -->
+
+</main>

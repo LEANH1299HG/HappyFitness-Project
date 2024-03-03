@@ -1,0 +1,50 @@
+<main>
+  <section class="section">
+    <div class="container-fluid mt-5">
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <h3 class="mb-0">Team</h3>
+                </div>
+                <div class="col-2 text-right">
+                  <button style="font-size: 13px;" type="button" class="btn btn-primary mt-1" (click)="add()">+
+                    Add new user
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- news.component.html -->
+
+            <div class="container" style="margin-left: 2rem; margin-right: 0; margin-top: 1rem;">
+              <div class="row" *ngFor="let row of listAccount">
+                <div class="col-lg-3 mb-3" *ngFor="let newsItem of row">
+                  <div class="card shadow shadow-lg--hover">
+                    <div class="card-body">
+                      <!-- Phần ảnh -->
+                      <div class="image-section mb-3 text-center">
+                        <!-- Đặt hình ảnh ở đây -->
+                        <img class="imageLastestNews" alt="" [src]="newsItem.image">
+                      </div>
+                      <!-- Phần text -->
+                      <div class="text-section">
+                        <h6>{{ newsItem.title }}</h6>
+                        <p>{{ newsItem.time }}</p>
+                        <p>{{ newsItem.source }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

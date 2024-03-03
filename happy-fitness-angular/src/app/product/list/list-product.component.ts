@@ -62,7 +62,7 @@ export class ListProductComponent implements OnInit {
 
   }
 
-  addCleaner() {
+  add() {
     this.router.navigate(['/list-product']);
   }
 }

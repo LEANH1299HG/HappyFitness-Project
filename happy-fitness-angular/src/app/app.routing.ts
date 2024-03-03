@@ -14,12 +14,18 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ListProductComponent } from "./product/list/list-product.component";
 import { CreateProductComponent } from "./product/create/create-product.component";
 import { EditProductComponent } from "./product/edit/edit-product.component";
+import { CreateAccountComponent } from "./product copy/create/create-account.component";
+import { EditAccountComponent } from "./product copy/edit/edit-account.component";
+import { ListAccountComponent } from "./product copy/list/list-account.component";
 
 
 const routes: Routes = [
 
   { path: 'register', component: SignupComponent },
   { path: 'home', component: IntroductionComponent },
+
+
+
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPWComponent },
   { path: 'change-password', component: ChangePassComponent },
@@ -30,6 +36,9 @@ const routes: Routes = [
   { path: 'list-product', component: ListProductComponent },
   { path: 'create-product', component: CreateProductComponent },
   { path: 'edit-product', component: EditProductComponent },
+  { path: 'create-account', component: CreateAccountComponent },
+  { path: 'edit-account', component: EditAccountComponent },
+  { path: 'list-account', component: ListAccountComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

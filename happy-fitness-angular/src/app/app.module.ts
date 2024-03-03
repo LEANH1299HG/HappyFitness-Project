@@ -31,6 +31,9 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { EditProductComponent } from "./product/edit/edit-product.component";
 import { CreateProductComponent } from "./product/create/create-product.component";
 import { ListProductComponent } from "./product/list/list-product.component";
+import { EditAccountComponent } from "./product copy/edit/edit-account.component";
+import { CreateAccountComponent } from "./product copy/create/create-account.component";
+import { ListAccountComponent } from "./product copy/list/list-account.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -53,6 +56,9 @@ import { ListProductComponent } from "./product/list/list-product.component";
     ListProductComponent,
     CreateProductComponent,
     EditProductComponent,
+    EditAccountComponent,
+    ListAccountComponent,
+    CreateAccountComponent,
   ],
   imports: [
     NgbModule,
