@@ -131,7 +131,7 @@
 }
 
 #product_name, #productType, #product_price{
-    width: 100%;
+    // width: 100%;
     height: 35px;
 }
 
@@ -145,7 +145,6 @@
     padding: 7px;
     font-weight: 700;
     font-family: 'Roboto Slab', serif;
-    margin-right: 5rem ;
 }
 
 .btn-color-2 {
@@ -179,6 +178,6 @@
     }
 
     .product_ {
-        width: 100%; /* Make the input take up the full width of the container */
+        // width: 100%; /* Make the input take up the full width of the container */
         box-sizing: border-box; /* Include padding and border in the width calculation */
     }

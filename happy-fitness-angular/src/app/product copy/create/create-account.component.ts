@@ -21,7 +21,7 @@ export class CreateAccountComponent implements OnInit {
   product_name: any;
   product_price: any;
   selectedType: string; // Biến lưu trữ loại sanpham được chọn
-  productTypes: string[] = ["TypeA", "TypeB", "TypeC"];
+  genderTypes: string[] = ["Male", "Female"];
 
   constructor(
     private router: Router,
@@ -30,8 +30,12 @@ export class CreateAccountComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.value = 'default';
-    this.selectedType = this.productTypes[0];
+
+    this.value = '';
+    this.selectedType = this.genderTypes[0];
+    this.product_name = '';
+    this.product_price = '';
+    this.note = ''
   }
 
   selectedOption(string: string) {

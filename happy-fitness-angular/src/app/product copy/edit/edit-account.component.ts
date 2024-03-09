@@ -19,13 +19,13 @@ export class EditAccountComponent implements OnInit {
   product_name: any;
   product_price: any;
   selectedType: string; // Biến lưu trữ loại sanpham được chọn
-  productTypes: string[] = ["Clothes", "Service", "Other"];
+  genderTypes: string[] = ["Clothes", "Service", "Other"];
 
   constructor() { }
 
   ngOnInit() {
     this.value = 'default';
-    this.selectedType = this.productTypes[0];
+    this.selectedType = this.genderTypes[0];
     this.product_name = 'Gym Suit 1';
     this.product_price = '$1200';
     this.note = 'This product is very good'
