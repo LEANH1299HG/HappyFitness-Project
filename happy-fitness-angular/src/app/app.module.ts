@@ -34,6 +34,10 @@ import { ListProductComponent } from "./product/list/list-product.component";
 import { EditAccountComponent } from "./product copy/edit/edit-account.component";
 import { CreateAccountComponent } from "./product copy/create/create-account.component";
 import { ListAccountComponent } from "./product copy/list/list-account.component";
+import { OrderCheckoutComponent } from "./order/checkout/order-checkout.component";
+import { OrderDetailComponent } from "./order/detail/order-detail.component";
+import { OrderHomeComponent } from "./order/home/order-home.component";
+import { OrderHistoryComponent } from "./order/history/order-history.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -59,6 +63,10 @@ import { ListAccountComponent } from "./product copy/list/list-account.component
     EditAccountComponent,
     ListAccountComponent,
     CreateAccountComponent,
+    OrderCheckoutComponent,
+    OrderDetailComponent,
+    OrderHomeComponent,
+    OrderHistoryComponent,
   ],
   imports: [
     NgbModule,

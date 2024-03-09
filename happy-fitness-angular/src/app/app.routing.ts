@@ -17,6 +17,10 @@ import { EditProductComponent } from "./product/edit/edit-product.component";
 import { CreateAccountComponent } from "./product copy/create/create-account.component";
 import { EditAccountComponent } from "./product copy/edit/edit-account.component";
 import { ListAccountComponent } from "./product copy/list/list-account.component";
+import { OrderCheckoutComponent } from "./order/checkout/order-checkout.component";
+import { OrderDetailComponent } from "./order/detail/order-detail.component";
+import { OrderHomeComponent } from "./order/home/order-home.component";
+import { OrderHistoryComponent } from "./order/history/order-history.component";
 
 
 const routes: Routes = [
@@ -39,6 +43,10 @@ const routes: Routes = [
   { path: 'create-account', component: CreateAccountComponent },
   { path: 'edit-account', component: EditAccountComponent },
   { path: 'list-account', component: ListAccountComponent },
+  { path: 'order-checkout', component: OrderCheckoutComponent },
+  { path: 'order-detail', component: OrderDetailComponent },
+  { path: 'order-home', component: OrderHomeComponent },
+  { path: 'order-history', component: OrderHistoryComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
