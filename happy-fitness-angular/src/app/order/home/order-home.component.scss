@@ -70,6 +70,9 @@
 
 .imageLastestNews {
     width: 235px;
+    padding: 2rem;
+    padding-top: 0;
+    text-align: center;
 }
 
 .text-section {
@@ -105,4 +108,22 @@
 .imageHotTopic {
     width: 850px;
     height: 390px;
+}
+
+.image-section {
+    position: relative;
+}
+
+.text-middle {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.padding-3{
+    padding: 0 3rem;
 }

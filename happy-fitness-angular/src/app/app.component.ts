@@ -25,8 +25,8 @@ var navbarHeight = 0;
 export class AppComponent implements OnInit {
   private _router: Subscription;
   customerNavbar = true;
-  guestNavbar = false;
-  managerNavbar = true;
+  guestNavbar = true;
+  managerNavbar = false;
   isAuthenticated = false;
   isAuthenticated$: Observable<boolean>;
   username: any;
