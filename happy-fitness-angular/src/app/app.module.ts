@@ -38,6 +38,8 @@ import { OrderCheckoutComponent } from "./order/checkout/order-checkout.componen
 import { OrderDetailComponent } from "./order/detail/order-detail.component";
 import { OrderHomeComponent } from "./order/home/order-home.component";
 import { OrderHistoryComponent } from "./order/history/order-history.component";
+import { AuthService } from "./services/services/auth.service";
+import { ApiService } from "./services/services/api.service";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -90,7 +92,10 @@ import { OrderHistoryComponent } from "./order/history/order-history.component";
     GoogleMapsModule,
     HttpClientJsonpModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    ApiService
+  ],
   bootstrap: [AppComponent],
   entryComponents: [],
   exports: [],

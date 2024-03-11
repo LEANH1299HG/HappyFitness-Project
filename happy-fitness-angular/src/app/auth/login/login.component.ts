@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
+import { AuthService } from "src/app/services/services/auth.service";
 
 @Component({
   selector: "app-login",
@@ -19,13 +20,42 @@ export class LoginComponent implements OnInit {
   account_wrong = false;
   constructor(
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
   }
 
   login() {
+    this.authService.signin(this.account_name, this.password).subscribe({
+      next: (res) => {
+        // this.authService.getUserInfor().subscribe((data) => {
+        //   if (data.data.role.name == "CUSTOMER") {
+        //     this.authService.setAuthenticationStatus(true);
+        //     this.router.navigate(["/home"]);
+        //   } else if (
+        //     data.data.role.name == "MANAGER"
+        //   ) {
+        //     this.authService.setAuthenticationStatus(true);
+        //     this.router.navigate(["/dashboard"]);
+        //   } else if (data.data.role.name == "CLEANER") {
+        //     this.authService.setAuthenticationStatus(true);
+        //     this.router.navigate(["/schedule"]);
+        //   } else if (data.data.role.name == "ADMIN") {
+        //     this.authService.setAuthenticationStatus(true);
+        //     this.router.navigate(["/list-customer"]);
+        //   } else if (data.data.role.name == "LEADER") {
+        //     this.authService.setAuthenticationStatus(true);
+        //     this.router.navigate(["/management-schedule"]);
+        //   }
+        // });
+        this.router.navigate(["/home"]);
+      }, // nextHandler
+      error: (err) => {
+        console.log(err);
+      }, // errorHandler
+    });
   }
 
   signUp(){
