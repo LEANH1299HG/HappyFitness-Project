@@ -21,6 +21,7 @@ import { OrderCheckoutComponent } from "./order/checkout/order-checkout.componen
 import { OrderDetailComponent } from "./order/detail/order-detail.component";
 import { OrderHomeComponent } from "./order/home/order-home.component";
 import { OrderHistoryComponent } from "./order/history/order-history.component";
+import { TicketListComponent } from "./ticket/ticket-list/ticket-list.component";
 
 
 const routes: Routes = [
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: 'order-detail', component: OrderDetailComponent },
   { path: 'order-home', component: OrderHomeComponent },
   { path: 'order-history', component: OrderHistoryComponent },
+  { path: 'ticket-list', component: TicketListComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

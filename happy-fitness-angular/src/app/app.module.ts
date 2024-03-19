@@ -40,6 +40,7 @@ import { OrderHomeComponent } from "./order/home/order-home.component";
 import { OrderHistoryComponent } from "./order/history/order-history.component";
 import { AuthService } from "./services/services/auth.service";
 import { ApiService } from "./services/services/api.service";
+import { TicketListComponent } from "./ticket/ticket-list/ticket-list.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -69,6 +70,7 @@ import { ApiService } from "./services/services/api.service";
     OrderDetailComponent,
     OrderHomeComponent,
     OrderHistoryComponent,
+    TicketListComponent
   ],
   imports: [
     NgbModule,
