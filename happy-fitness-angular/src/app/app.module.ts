@@ -41,6 +41,7 @@ import { OrderHistoryComponent } from "./order/history/order-history.component";
 import { AuthService } from "./services/services/auth.service";
 import { ApiService } from "./services/services/api.service";
 import { TicketListComponent } from "./ticket/ticket-list/ticket-list.component";
+import { TicketDetailComponent } from "./ticket/ticket-detail/ticket-detail.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -70,7 +71,8 @@ import { TicketListComponent } from "./ticket/ticket-list/ticket-list.component"
     OrderDetailComponent,
     OrderHomeComponent,
     OrderHistoryComponent,
-    TicketListComponent
+    TicketListComponent,
+    TicketDetailComponent,
   ],
   imports: [
     NgbModule,
