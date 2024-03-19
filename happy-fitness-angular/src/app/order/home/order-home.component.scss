@@ -157,10 +157,13 @@
     font-size: 20px;
     font-weight: 600;
     margin-right: 130px;
+    text-decoration: line-through; /* Thêm thuộc tính text-decoration với giá trị line-through */
+
 }
 
 .price-discount{
     display: flex;
+    margin-top: 10px;
 }
 
 .lesson-student{
@@ -170,6 +173,7 @@
 .text-section{
     p{
         margin-bottom: 5px !important;
+        margin-top: 5px;
     }
 }
 
@@ -179,4 +183,29 @@
 
 .students{
     padding: 10px;
+}
+
+.btn-color-2 {
+    background-color: #23A6F0;
+    border-radius: 5px;
+    width: 100px;
+    height: 34px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 7px;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 15px;
+}
+
+#productType{
+    width: 130px;
+    height: 34px;
+    color: #DDDDDD;
+    background-color: #F9F9F9;
+    margin-top: 1px;
+}
+
+.product-footer{
+    display: flex;
 }

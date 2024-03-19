@@ -18,10 +18,13 @@ export class OrderHomeComponent implements OnInit {
   productLists: any;
   averageRating = 4;
   ratingNumber = 15;
+  selectedType: string; // Biến lưu trữ loại sanpham được chọn
+  Types: string[] = ["TypeA", "TypeB"];
 
   constructor() { }
 
   ngOnInit() {
+    this.selectedType = this.Types[0];
     this.value = 'default';
     this.productLists = [
       {
@@ -236,5 +239,9 @@ export class OrderHomeComponent implements OnInit {
     }
 
     return stars.join('');
+  }
+
+  filter() {
+
   }
 }
