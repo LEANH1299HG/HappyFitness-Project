@@ -23,6 +23,9 @@ import { OrderHomeComponent } from "./order/home/order-home.component";
 import { OrderHistoryComponent } from "./order/history/order-history.component";
 import { TicketListComponent } from "./ticket/ticket-list/ticket-list.component";
 import { TicketDetailComponent } from "./ticket/ticket-detail/ticket-detail.component";
+import { ListTicketAdComponent } from "./ticket/list-admin/list-ticket-admin.component";
+import { CreateTicketComponent } from "./ticket/create-ticket/create-ticket.component";
+import { EditTicketComponent } from "./ticket/edit-ticket/edit-ticket.component";
 
 
 const routes: Routes = [
@@ -51,6 +54,9 @@ const routes: Routes = [
   { path: 'order-history', component: OrderHistoryComponent },
   { path: 'ticket-list', component: TicketListComponent },
   { path: 'ticket-detail', component: TicketDetailComponent },
+  { path: 'ticket-add', component: CreateTicketComponent },
+  { path: 'ticket-update', component: EditTicketComponent },
+  { path: 'ticket-list-ad', component: ListTicketAdComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

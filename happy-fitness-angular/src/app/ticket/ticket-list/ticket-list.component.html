@@ -1,6 +1,6 @@
 <main>
   <section class="section" style="display: flex;">
-    <div class="col-lg-2" style="margin-left: 1rem; margin-top: 5rem;">
+    <div class="col-lg-2" style="margin-left: 1rem; margin-top: 6rem;">
       <div class="sidebar">
         <!-- Filter Location -->
         <h5>Location</h5>
@@ -39,16 +39,16 @@
         <hr>
         <h5>Price Range</h5>
         <div class="price-slider">
-          <!-- <mat-slider min="0" max="10000000" step="100000" thumbLabel [(ngModel)]="priceRange"
-            (input)="filterByPrice()"></mat-slider> -->
+          <mat-slider min="0" max="10000000" step="100000" thumbLabel [(ngModel)]="priceRange"
+            (input)="filterByPrice()"></mat-slider>
           <div class="price-labels">
-            <span>0 đ</span>
-            <span>10,000,000 đ</span>
+            <span>{{priceRange}} đ</span>
+            <!-- <span>10,000,000 đ</span> -->
           </div>
         </div>
       </div>
     </div>
-    <div class="container col-lg-9" style="margin-left: 1rem; margin-top: 2rem;">
+    <div class="container col-lg-9" style="margin-left: 1rem; margin-top: 4rem;">
       <div class="row row-grid align-items-center">
         <div class="col px-0">
           <div class="d-flex">

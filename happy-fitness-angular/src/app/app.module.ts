@@ -42,6 +42,10 @@ import { AuthService } from "./services/services/auth.service";
 import { ApiService } from "./services/services/api.service";
 import { TicketListComponent } from "./ticket/ticket-list/ticket-list.component";
 import { TicketDetailComponent } from "./ticket/ticket-detail/ticket-detail.component";
+import { MatSliderModule } from '@angular/material/slider';
+import { EditTicketComponent } from "./ticket/edit-ticket/edit-ticket.component";
+import { CreateTicketComponent } from "./ticket/create-ticket/create-ticket.component";
+import { ListTicketAdComponent } from "./ticket/list-admin/list-ticket-admin.component";
 
 // import { FormsModule } from '@angular/forms';
 
@@ -72,7 +76,10 @@ import { TicketDetailComponent } from "./ticket/ticket-detail/ticket-detail.comp
     OrderHomeComponent,
     OrderHistoryComponent,
     TicketListComponent,
+    ListTicketAdComponent,
     TicketDetailComponent,
+    CreateTicketComponent,
+    EditTicketComponent,
   ],
   imports: [
     NgbModule,
@@ -94,7 +101,8 @@ import { TicketDetailComponent } from "./ticket/ticket-detail/ticket-detail.comp
       preventDuplicates: true,
     }),
     GoogleMapsModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    MatSliderModule
   ],
   providers: [
     AuthService,

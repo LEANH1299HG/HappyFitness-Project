@@ -1,0 +1,91 @@
+<main>
+  <section class="section">
+    <div class="container-fluid mt-5">
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow" *ngIf="listProduct.length > 0 ">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <h3 class="mb-0">Products List</h3>
+                </div>
+                <div class="col-2 text-right">
+                  <button style="font-size: 13px;" type="button" class="btn btn-primary mt-1" (click)="add()">+
+                    Add new product
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive" style="min-height: 300px;">
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Produuct ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Piece</th>
+                    <th scope="col">Avvaiable Color</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of listProduct">
+                    <th scope="row">
+                      <div class="media align-items-center">
+                        <div class="media-body">
+                          <span class="mb-0 text-sm">{{product.productId}}</span>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      {{product.imageUrl}}
+                    </td>
+                    <td>
+                      {{product.name}}
+                    </td>
+                    <td>
+                      {{product.category}}
+                    </td>
+                    <td>
+                      {{product.price}}
+                    </td>
+                    <td>
+                      {{product.piece}}
+                    </td>
+                    <td>
+                      {{product.avaialeColor}}
+                    </td>
+                    <td class="text-center">
+                      <div class="button-action">
+                        <div>
+                          <button class="button-edit" aria-label="Delete" (click)="delete(product.productId)">
+                            <span class="icon-container">
+                              <img src="assets/img/pencil-write.png" class="" style="width: 20px; height: 20px;"
+                                alt=" ...">
+                            </span>
+                          </button>
+                        </div>
+                        <div>
+                          <button class="button-delete" aria-label="Edit" (click)="edit(product.productId)">
+                            <span class="icon-container">
+                              <img src="assets/img/bin.png" class="" style="width: 20px; height: 20px;" alt=" ...">
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

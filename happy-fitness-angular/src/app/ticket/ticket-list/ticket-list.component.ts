@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule ở đây
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @Component({
