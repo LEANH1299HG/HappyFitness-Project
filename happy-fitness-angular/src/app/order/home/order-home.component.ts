@@ -16,6 +16,8 @@ export class OrderHomeComponent implements OnInit {
   listCourses: any[];
   newsItems: any;
   productLists: any;
+  averageRating = 4;
+  ratingNumber = 15;
 
   constructor() { }
 
@@ -53,75 +55,147 @@ export class OrderHomeComponent implements OnInit {
       // Bạn có thể thay đổi các giá trị của các phần tử tùy thuộc vào dữ liệu thực tế
       {
         title: 'Jason Price',
-        time: 'Admin',
+        desc: 'Admin',
         source: 'janick_parisian@yahoo.com',
-        image: 'assets/img/image (1).png'
+        image: 'assets/img/image (1).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Jukkoe Sisao',
-        time: 'CEO',
+        desc: 'CEO',
         source: 'sibyl_kozey@gmail.com',
-        image: 'assets/img/image (2).png'
+        image: 'assets/img/image (2).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Harriet King',
-        time: 'CTO',
+        desc: 'CTO',
         source: 'nadia_block@hotmail.com',
-        image: 'assets/img/image (1).png'
+        image: 'assets/img/image (1).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Lemora Benson',
-        time: 'Lead',
+        desc: 'Lead',
         source: 'feil.wallace@kunde.us',
-        image: 'assets/img/image (2).png'
+        image: 'assets/img/image (2).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Olivia Reese',
-        time: 'Strategist',
+        desc: 'Strategist',
         source: 'kemmer.hattie@cremin.us',
-        image: 'assets/img/image (1).png'
+        image: 'assets/img/image (1).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Bertha Valdez',
-        time: 'CEO',
+        desc: 'CEO',
         source: 'loraine.koelpin@tromp.io',
-        image: 'assets/img/image (2).png'
+        image: 'assets/img/image (2).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Harriett Payne',
-        time: 'Digital Marketer',
+        desc: 'Digital Marketer',
         source: 'nannie_west@estrella.tv',
-        image: 'assets/img/image (1).png'
+        image: 'assets/img/image (1).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'George Bryant',
-        time: 'Social Media',
+        desc: 'Social Media',
         source: 'delmer.kling@gmail.com',
-        image: 'assets/img/image (2).png'
+        image: 'assets/img/image (2).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Lily French',
-        time: 'Strategist',
+        desc: 'Strategist',
         source: 'lucienne.herman@hotmail',
-        image: 'assets/img/image (1).png'
+        image: 'assets/img/image (1).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Howard Adkins',
-        time: 'CEO',
+        desc: 'CEO',
         source: 'wiegand.leonor@herman',
-        image: 'assets/img/image (2).png'
+        image: 'assets/img/image (2).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Earl Bowman',
-        time: 'Digital Marketer',
+        desc: 'Digital Marketer',
         source: 'waino_altenwerth@nicolette',
-        image: 'assets/img/image (1).png'
+        image: 'assets/img/image (1).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       {
         title: 'Patrick Padilla',
-        time: 'Social Media',
+        desc: 'Social Media',
         source: 'octavia.nienow@gleichner',
-        image: 'assets/img/image (2).png'
+        image: 'assets/img/image (2).png',
+        lessons: 12,
+        students: 50,
+        price: 120,
+        averageRating: 4,
+        ratingNumber: 15,
+        discount: 95
       },
       // Thêm các mục tin tức khác tương tự ở đây
     ];
@@ -146,5 +220,21 @@ export class OrderHomeComponent implements OnInit {
 
   viewAll() {
 
+  }
+
+  generateStarRating(rating: number): string {
+    const stars: string[] = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push('<i class="fas fa-star"></i>');
+    }
+
+    if (hasHalfStar) {
+      stars.push('<i class="fas fa-star-half-alt"></i>');
+    }
+
+    return stars.join('');
   }
 }
