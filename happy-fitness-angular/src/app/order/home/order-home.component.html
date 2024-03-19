@@ -38,8 +38,8 @@
       <div class="row row-grid align-items-center">
         <div class="col px-0">
           <div class="d-flex">
-            <h5 class="display-3" style="min-width: 500px;">Most Popular Courses</h5>
-            <div class="col-lg-6 text-right py-lg-3">
+            <h6 class="display-3" style="min-width: 400px;">Most Popular Courses</h6>
+            <div class="col-lg-8 text-right py-lg-3">
               <button
                 style="width: 200px; height: 55px; display: inline-block; font-size: 14px; font-weight: 700;
                  padding-top: 0.35rem; text-align: center; background-color: #B22234; color: #FFFFFF; border-radius: 10px;"
@@ -68,15 +68,17 @@
                           </span>
                         </div>
                         <h6>{{ newsItem.title }}</h6>
-                        <div>
-                          <span><img class="logo-lessons" alt=""
-                              src="/assets/img/File_Document.png">{{newsItem.lessons}} Lessons</span><span><img
-                              class="logo-lessons" alt="" src="/assets/img/User_Group.png">{{newsItem.students}}
-                            Students</span>
+                        <div class="lesson-student">
+                          <div class="lessons"><img class="logo-lessons" alt=""
+                              src="./assets/img/File_Document.png">{{newsItem.lessons}}
+                            Lessons</div>
+                          <div class="students"><img class="logo-lessons" alt=""
+                              src="./assets/img/User_Group.png">{{newsItem.students}}
+                            Students</div>
                         </div>
                         <p>{{ newsItem.desc }}</p>
                         <p>{{ newsItem.source }}</p>
-                        <div class="price"><span class="discount">${{newsItem.discount}}</span><span
+                        <div class="price-discount"><span class="discount">${{newsItem.discount}}</span><span
                             class="price">${{newsItem.price}}</span>
                           <div>Learn more</div>
                         </div>

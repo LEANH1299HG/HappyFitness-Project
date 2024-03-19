@@ -131,3 +131,52 @@
 .star-rating i {
   color: gold;
 }
+
+.lesson-student{
+    span{
+        width: 95px;
+        height: 40px;
+        color: #0E0D0D;
+    }
+}
+
+.desc{
+    color: #878686;
+}
+
+.discount{
+    margin-right: 10px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.price{
+    margin-right: 10px;
+    color: #7A7575;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 130px;
+}
+
+.price-discount{
+    display: flex;
+}
+
+.lesson-student{
+    display: flex;
+}
+
+.text-section{
+    p{
+        margin-bottom: 5px !important;
+    }
+}
+
+.lessons{
+    padding: 10px;
+}
+
+.students{
+    padding: 10px;
+}
