@@ -1,0 +1,106 @@
+<main>
+    <section class="section" style="display: flex;">
+      <div class="col-lg-2" style="margin-left: 1rem; margin-top: 6rem;">
+        <div class="sidebar">
+          <!-- Filter Location -->
+          <h5>Location</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="location1">
+            <label class="form-check-label" for="location1">
+              Location 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="location2">
+            <label class="form-check-label" for="location2">
+              Location 2
+            </label>
+          </div>
+          <!-- Thêm các checkbox khác tương tự -->
+  
+          <!-- Filter Categories -->
+          <hr>
+          <h5>Categories</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="category1">
+            <label class="form-check-label" for="category1">
+              Category 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="category2">
+            <label class="form-check-label" for="category2">
+              Category 2
+            </label>
+          </div>
+          <!-- Thêm các checkbox khác tương tự -->
+  
+          <!-- Filter Price Range -->
+          <hr>
+          <h5>Price Range</h5>
+          <div class="price-slider">
+            <mat-slider min="0" max="10000000" step="100000" thumbLabel [(ngModel)]="priceRange"
+              (input)="filterByPrice()"></mat-slider>
+            <div class="price-labels">
+              <span>{{priceRange}} đ</span>
+              <!-- <span>10,000,000 đ</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container col-lg-9" style="margin-left: 1rem; margin-top: 4rem;">
+        <div class="row row-grid align-items-center">
+          <div class="col px-0">
+            <div class="d-flex">
+              <h4 class="display-3">List Gym</h4>
+              <div class="col-lg-10 text-right py-lg-3">
+                <a style="width: 85px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                  [ngClass]="{'btn-green':value=='default', 'btn-white':value !='default'}"
+                  (click)="selectedOption('default')">
+                  <span class="nav-link-inner--text">Default</span>
+                </a>
+                <a style="width: 50px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                  [ngClass]="{'btn-green':value=='az', 'btn-white':value !='az'}" (click)="selectedOption('az')">
+                  <span class="nav-link-inner--text">A-Z</span>
+                </a>
+                <a style="width: 100px; height: 35px; display: inline-block; font-size: 14px; font-weight: 700; padding-top: 0.35rem; text-align: center;"
+                  [ngClass]="{'btn-green':value=='listview', 'btn-white':value !='listview'}"
+                  (click)="selectedOption('listview')">
+                  <span class="nav-link-inner--text">List view</span>
+                </a>
+              </div>
+            </div>
+            <div class="mt-5">
+              <div class="row" *ngFor="let row of chunkArray(ticketList, 3)">
+                <ng-container *ngFor="let ticket of row">
+                  <div class="col-lg-4 mb-4">
+                    <div class="card shadow shadow-lg--hover">
+                      <div class="card-body">
+                        <div class="image-section mb-3">
+                          <img class="imageHotGym" [src]="ticket.image" alt="">
+                        </div>
+                        <div class="text-section">
+                          <h5>{{ ticket.title }}</h5>
+                          <h6 class="price">{{ ticket.price }}</h6>
+                          <p>{{ ticket.location }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+  
+  </main>
