@@ -15,11 +15,34 @@ export class TicketDetailComponent implements OnInit {
   value = '';
   ticketList: { image: string; title: string; price: string; location: string; }[];
   priceRange: number = 0; // Giá trị ban đầu của priceRange
+  listProduct: { productId: number; imageUrl: string; name: string; category: string; price: number; piece: number; availableColor: string; }[];
 
   constructor() { }
 
   ngOnInit() {
     this.value = 'default';
+    // this.value = 'default';
+    this.listProduct = [
+      {
+        productId: 1,
+        imageUrl: 'url_to_your_image_1',
+        name: 'Product 1',
+        category: 'Category 1',
+        price: 10.99,
+        piece: 5,
+        availableColor: 'Red'
+      },
+      {
+        productId: 2,
+        imageUrl: 'url_to_your_image_2',
+        name: 'Product 2',
+        category: 'Category 2',
+        price: 15.99,
+        piece: 3,
+        availableColor: 'Blue'
+      },
+      // Add more products as needed
+    ];
     this.ticketList = [
       {
         image: "assets/img/image 5.png",
