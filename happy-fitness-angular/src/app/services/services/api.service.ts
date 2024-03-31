@@ -15,8 +15,32 @@ export class ApiService {
   // private SEND_OTP = this.baseUrl + "api/v1/otp/send-otp";
   // private VERIFY_OTP = this.baseUrl + "api/v1/otp/verify-otp";
   private USER_INFOR = this.baseUrl + "user/infor";
-  private LOGIN = this.baseUrl + "user/signin";
-  private REGISTER = this.baseUrl + "/user/signup";
+  private REGISTER = this.baseUrl + "/auth/signup";
+  private EDITPROFILE = this.baseUrl + "/auth/edit-profile";
+  private ME = this.baseUrl + "/auth/me";
+  private FORGETPASS = this.baseUrl + "/auth/forget-password/";
+  private VIEWCART = this.baseUrl + "/cart";
+  private ADDCART = this.baseUrl + "/cart/add";
+  private TICKET = this.baseUrl + "/api/user-ticket/extend";
+  // 1?voucherCode = VOUCHER_1
+  private TICKETHISTORY = this.baseUrl + "/user-ticket";
+  private ADDTICKET = this.baseUrl + "/cart/add";
+  private FACILITYTICKET = this.baseUrl + "/api/tickets?facilityId=1";
+  private DETAILTICKET = this.baseUrl + "/api/tickets/5";
+  private DASHBOARD = this.baseUrl + "/dashboard/info";
+  private REVENUE = this.baseUrl + "/dashboard/revenue";
+  private CREATEORD = this.baseUrl + "/orders/create";
+  private FINDORD = this.baseUrl + "/orders";
+  private DETAILORD = this.baseUrl + "/orders/15";
+  private GETPRO = this.baseUrl + "/products/P_20240221045126123a?facilityId=2";
+  private ADDPRO = this.baseUrl + "/products/add";
+  private UPDATEPRO = this.baseUrl + "/products/update/11";
+  private DEACTIVEPRO = this.baseUrl + "/products/delete/8";
+  private FINDUSER = this.baseUrl + "/users";
+  private CREATEUSER = this.baseUrl + "/users/create";
+  private DETAILUSER = this.baseUrl + "/users/manager_caugiay";
+  private DEACTIVEUSER = this.baseUrl + "/users/deactivate/user_caugiay";
+  private RESETPASSSWO = this.baseUrl + "/users/reset-password/user_caugiay";
   // // THIẾU 1 số api liên quan đến quyền / phân quyền và admin do chưa design
   // private CREATE_LOAN = this.baseUrl + "user/create-loan";
   // private CHECK_LOAN = this.baseUrl + "user/is-exist-loan";
@@ -37,15 +61,137 @@ export class ApiService {
     return this.http.get<any>(this.USER_INFOR, { headers });
   }
 
-  register(account_name: string, first:string, last:string, gender:string, tel: string, password: string): Observable<any> {
-    return this.http.post<any>(this.REGISTER, { account_name, first, last, gender, tel, password });
+  register(fullName: string, username: string, email: string, password: string, phoneNumber: string, role: any, gender: string, dob: string): Observable<any> {
+    return this.http.post<any>(this.REGISTER, { fullName, username, email, password, phoneNumber, role, gender, dob });
   }
 
+  // "fullName": "Đỗ Đức Dương",
+  // "username": "duongdd",
+  // "email": "giangdd@gmail.com",
+  // "password": "1414",
+  // "phoneNumber": "0979719735",
+  // "role": {
+  //   "id": "1"
+  // },
+  // "gender": true,
+  // "dob": "2000-11-14"
 
   public get(endpoint: string): Observable<any> {
     const headers = this.getHeadersWithToken();
     return this.http.get(`${this.baseUrl}/${endpoint}`, { headers });
   }
+
+  public editprofile(id: string, path: string, fullName: string, gender: string, dob: string, address: any, phoneNumber: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(this.EDITPROFILE, { id, path, fullName, gender, dob, address, phoneNumber }, { headers });
+  }
+
+
+  public me(): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(this.ME, { headers });
+  }
+
+  public forgetpass(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.FORGETPASS}/${mail}`, { headers });
+  }
+
+  public addCart(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public ticket(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+
+  public addTicket(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public findAllTicket(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public findTicketDetail(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.}`, { headers });
+  }
+
+  public ticketHistory(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public getRevune(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+
+  public getDashboard(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+
+  public createOrd(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public ordDetail(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public getProduct(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public addProduct(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public updateProduct(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+  public deactiveProduct(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ADDCART}`, { headers });
+  }
+
+
+  //   {
+  //   "quantity": 3,
+  //     "facilityProduct": {
+  //     "id": 17
+  //   }
+  // }
+
+  public viewCart(mail: string): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.VIEWCART}`, { headers });
+  }
+
+  //   {
+  //   "id": 3.0,
+  //     "path": null,
+  //       "fullName": "Đỗ Đức Dương",
+  //         "gender": true,
+  //           "dob": "2000-11-14T00:00:00.000+00:00",
+  //             "address": null,
+  //               "phoneNumber": "0979719735"
+  // }
 
   public post(endpoint: string, body: any): Observable<any> {
     const headers = this.getHeadersWithToken();
