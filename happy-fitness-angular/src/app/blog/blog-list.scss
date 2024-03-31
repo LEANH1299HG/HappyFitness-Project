@@ -1,0 +1,27 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .btn-primary {
+    background-color: #009FFF;
+    border-color: #009FFF;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
