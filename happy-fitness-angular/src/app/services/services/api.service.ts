@@ -120,7 +120,7 @@ export class ApiService {
 
   public findTicketDetail(mail: string): Observable<any> {
     const headers = this.getHeadersWithToken();
-    return this.http.post<any>(`${this.}`, { headers });
+    return this.http.post<any>(`${this.DETAILTICKET}`, { headers });
   }
 
   public ticketHistory(mail: string): Observable<any> {
