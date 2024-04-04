@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { AuthService } from "src/app/services/services/auth.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -41,9 +42,15 @@ export class SignupComponent implements OnInit {
   accountBlur: boolean;
   emailBlur: boolean;
   emailExist = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() { }
+
+  // TODO: verify password match re-password
+  // TODO: Check if 'toi dong y voi dieu khoan' is checked to allow sign-up
+  // TODO: gender default checked Nam(or Nu)
+  // TODO: Validate (not empty and format/length...) for every input
+
 
   verifyPassword(): boolean {
     const password = this.pwd;
@@ -52,6 +59,24 @@ export class SignupComponent implements OnInit {
   }
 
   signUp() {
+    const registerInfo = {
+      fullName: this.first_name,
+      username: this.account_name,
+      email: this.account_email,
+      password: this.pwd,
+      phoneNumber: this.phone,
+      gender: this.gender === 'Nam',
+      address: this.address,
+      dob: this.bod
+    }
+    this.authService.register(registerInfo).subscribe({
+      next: (res) => {
+        this.router.navigate(["/login"]);
+      }, // nextHandler
+      error: (err) => {
+        this.errorMessage = err.error.body
+      }, // errorHandler
+    });
   }
 
   signIn() {

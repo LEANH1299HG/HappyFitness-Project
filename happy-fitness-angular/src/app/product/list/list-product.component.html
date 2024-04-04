@@ -4,7 +4,7 @@
       <!-- Table -->
       <div class="row">
         <div class="col">
-          <div class="card shadow" *ngIf="listProduct.length > 0 ">
+          <div class="card shadow" *ngIf="listProduct">
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col-10">
@@ -31,7 +31,7 @@
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody *ngIf="listProduct">
                   <tr *ngFor="let product of listProduct">
                     <th scope="row">
                       <div class="media align-items-center">

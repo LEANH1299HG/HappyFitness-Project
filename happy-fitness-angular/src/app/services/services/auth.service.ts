@@ -8,7 +8,7 @@ import { jwtDecode } from "jwt-decode";
 export class AuthService {x
   private baseUrl = environment.apiUrl + "auth";
   private jwtToken: string;
-  private REGISTER = this.baseUrl + "/register";
+  private REGISTER = this.baseUrl + "/sign-up";
   private CHANGE_PASS = this.baseUrl + "/change-password";
   private LOGOUT = this.baseUrl + "/logout";
   private LOGIN = this.baseUrl + "/sign-in";

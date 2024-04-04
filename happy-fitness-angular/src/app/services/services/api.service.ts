@@ -21,6 +21,7 @@ export class ApiService {
   private FORGETPASS = this.baseUrl + "/auth/forget-password/";
   private VIEWCART = this.baseUrl + "/cart";
   private ADDCART = this.baseUrl + "/cart/add";
+  private GET_PRODUCT = this.baseUrl + "products";
   private TICKET = this.baseUrl + "/api/user-ticket/extend";
   // 1?voucherCode = VOUCHER_1
   private TICKETHISTORY = this.baseUrl + "/user-ticket";
@@ -150,9 +151,9 @@ export class ApiService {
     return this.http.post<any>(`${this.ADDCART}`, { headers });
   }
 
-  public getProduct(mail: string): Observable<any> {
+  public getProduct(facilityId = 2): Observable<any> {
     const headers = this.getHeadersWithToken();
-    return this.http.post<any>(`${this.ADDCART}`, { headers });
+    return this.http.get<any>(`${this.GET_PRODUCT}?facilityId=${facilityId}`, { headers: headers['headers'] });
   }
 
   public addProduct(mail: string): Observable<any> {
