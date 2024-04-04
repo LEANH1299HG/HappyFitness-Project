@@ -43,14 +43,44 @@ export class ListProductComponent implements OnInit {
   }
 
   delete(id: any) {
+    this.apiService.deactiveProduct(id).subscribe({
+      next: (res) => {
+        this.listProduct = this.listProduct.map(it => {
+          if (it.productId === id) {
+            it.status = "Vô hiệu hóa"
+          }
 
+          return it
+        })
+      }, // nextHandler
+      error: (err) => {
+        console.info(err)
+      }, // errorHandler
+    })
+  }
+
+  active(id: any) {
+    this.apiService.activeProduct(id).subscribe({
+      next: (res) => {
+        this.listProduct = this.listProduct.map(it => {
+          if (it.productId === id) {
+            it.status = "Hoạt động"
+          }
+
+          return it
+        })
+      }, // nextHandler
+      error: (err) => {
+        console.info(err)
+      }, // errorHandler
+    })
   }
 
   edit(id: any) {
-
+    this.router.navigate([`/edit-product/${id}`])
   }
 
   add() {
-    this.router.navigate(['/list-product']);
+    this.router.navigate(['/create-product']);
   }
 }

@@ -36,7 +36,8 @@ export class ApiService {
   private GETPRO = this.baseUrl + "/products/P_20240221045126123a?facilityId=2";
   private ADDPRO = this.baseUrl + "/products/add";
   private UPDATEPRO = this.baseUrl + "/products/update/11";
-  private DEACTIVEPRO = this.baseUrl + "/products/delete/8";
+  private DEACTIVEPRODUCT = this.baseUrl + "products/delete/";
+  private ACTIVE_PRODUCT = this.baseUrl + "products/active/";
   private FINDUSER = this.baseUrl + "/users";
   private CREATEUSER = this.baseUrl + "/users/create";
   private DETAILUSER = this.baseUrl + "/users/manager_caugiay";
@@ -51,11 +52,8 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   private getHeadersWithToken(): HttpHeaders {
-    const token = localStorage.getItem('jwt');
-    return new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`
-    });
+    const token = sessionStorage.getItem('token');
+    return new HttpHeaders().set('Authorization', 'Bearer ' + token);
   }
   getUsers(): Observable<any> {
     const headers = this.getHeadersWithToken();
@@ -166,9 +164,14 @@ export class ApiService {
     return this.http.post<any>(`${this.ADDCART}`, { headers });
   }
 
-  public deactiveProduct(mail: string): Observable<any> {
+  public deactiveProduct(id: number): Observable<any> {
     const headers = this.getHeadersWithToken();
-    return this.http.post<any>(`${this.ADDCART}`, { headers });
+    return this.http.post<any>(`${this.DEACTIVEPRODUCT}${id}`,{} , { headers });
+  }
+
+  public activeProduct(id: number): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.ACTIVE_PRODUCT}${id}`, {}, { headers });
   }
 
 

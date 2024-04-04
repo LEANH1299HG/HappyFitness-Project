@@ -21,27 +21,17 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">Produuct ID</th>
                     <th scope="col">Image</th>
                     <th scope="col">Product Name</th>
                     <th scope="col">Category</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Piece</th>
-                    <th scope="col">Avvaiable Color</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody *ngIf="listProduct">
                   <tr *ngFor="let product of listProduct">
-                    <th scope="row">
-                      <div class="media align-items-center">
-                        <div class="media-body">
-                          <span class="mb-0 text-sm">{{product.productId}}</span>
-                        </div>
-                      </div>
-                    </th>
                     <td>
-                      {{product.imageUrl}}
+                      <img [src]="'http://localhost:8089/' + product.imagePath" alt="Product Image">
                     </td>
                     <td>
                       {{product.name}}
@@ -52,26 +42,24 @@
                     <td>
                       {{product.price}}
                     </td>
-                    <td>
-                      {{product.piece}}
-                    </td>
-                    <td>
-                      {{product.avaialeColor}}
-                    </td>
                     <td class="text-center">
                       <div class="button-action">
                         <div>
-                          <button class="button-edit" aria-label="Delete" (click)="delete(product.productId)">
+                          <button class="button button-edit" aria-label="Edit" (click)="edit(product.productId)">
                             <span class="icon-container">
-                              <img src="assets/img/pencil-write.png" class="" style="width: 20px; height: 20px;"
-                                alt=" ...">
+                              Edit
                             </span>
                           </button>
                         </div>
                         <div>
-                          <button class="button-delete" aria-label="Edit" (click)="edit(product.productId)">
+                          <button *ngIf="product.status !== 'Vô hiệu hóa'" class="button button-delete" aria-label="Delete" (click)="delete(product.productId)">
                             <span class="icon-container">
-                              <img src="assets/img/bin.png" class="" style="width: 20px; height: 20px;" alt=" ...">
+                              Delete
+                            </span>
+                          </button>
+                          <button *ngIf="product.status === 'Vô hiệu hóa'" class="button button-delete" aria-label="Delete" (click)="active(product.productId)">
+                            <span class="icon-container">
+                              Active
                             </span>
                           </button>
                         </div>
