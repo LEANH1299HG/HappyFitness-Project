@@ -22,6 +22,11 @@ export class ApiService {
   private VIEWCART = this.baseUrl + "/cart";
   private ADDCART = this.baseUrl + "/cart/add";
   private GET_PRODUCT = this.baseUrl + "products";
+  private GET_ALL_FACILITY = this.baseUrl + "facilities";
+  private GET_ALL_CATEGORY = this.baseUrl + "categories";
+  private GET_ALL_SUPPLIER = this.baseUrl + "suppliers";
+  private UPDATE_PRODUCT = this.baseUrl + "products/update/";
+  private UPDATE_FACILITY_PRODUCT = this.baseUrl + "facility-product/update";
   private TICKET = this.baseUrl + "/api/user-ticket/extend";
   // 1?voucherCode = VOUCHER_1
   private TICKETHISTORY = this.baseUrl + "/user-ticket";
@@ -151,15 +156,40 @@ export class ApiService {
 
   public getProduct(facilityId = 2): Observable<any> {
     const headers = this.getHeadersWithToken();
-    return this.http.get<any>(`${this.GET_PRODUCT}?facilityId=${facilityId}`, { headers: headers['headers'] });
+    return this.http.get<any>(`${this.GET_PRODUCT}?facilityId=${facilityId}`, { headers });
+  }
+
+  public getAllFacility(): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.get<any>(`${this.GET_ALL_FACILITY}`, { headers });
+  }
+
+  public getAllCategory(): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.get<any>(`${this.GET_ALL_CATEGORY}`, { headers });
+  }
+
+  public getAllSupplier(): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.get<any>(`${this.GET_ALL_SUPPLIER}`, { headers });
+  }
+
+  public updateProduct(nextProduct, id): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.UPDATE_PRODUCT}${id}`, nextProduct, { headers });
+  }
+
+  public updateFacilityProduct(nextFacilityProduct, productId, facility): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.post<any>(`${this.UPDATE_FACILITY_PRODUCT}?productId=${productId}&facilityId=${facility}`, nextFacilityProduct, { headers });
+  }
+
+  public getProductByCode(code: string, facilityId): Observable<any> {
+    const headers = this.getHeadersWithToken();
+    return this.http.get<any>(`${this.GET_PRODUCT}/${code}?facilityId=${facilityId}`, { headers });
   }
 
   public addProduct(mail: string): Observable<any> {
-    const headers = this.getHeadersWithToken();
-    return this.http.post<any>(`${this.ADDCART}`, { headers });
-  }
-
-  public updateProduct(mail: string): Observable<any> {
     const headers = this.getHeadersWithToken();
     return this.http.post<any>(`${this.ADDCART}`, { headers });
   }

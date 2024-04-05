@@ -76,8 +76,8 @@ export class ListProductComponent implements OnInit {
     })
   }
 
-  edit(id: any) {
-    this.router.navigate([`/edit-product/${id}`])
+  edit(code: any) {
+    this.router.navigate([`/edit-product/${code}`])
   }
 
   add() {

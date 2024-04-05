@@ -12,6 +12,7 @@ export class AuthService {x
   private CHANGE_PASS = this.baseUrl + "/change-password";
   private LOGOUT = this.baseUrl + "/logout";
   private LOGIN = this.baseUrl + "/sign-in";
+  private GET_OWN_INFO = this.baseUrl
   private EDITPROFILE = environment.apiUrl + "/edit-profile";
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
@@ -36,6 +37,11 @@ export class AuthService {x
           }
         })
       );
+  }
+
+  getOwnInfo(): Observable<any> {
+    const headers = this.getHeaders();
+    return this.http.get<any>(`${this.GET_OWN_INFO}/me`, { headers });
   }
 
   changePass(username: string, password: string): Observable<any> {
@@ -69,7 +75,8 @@ export class AuthService {x
 
   getHeaders(): HttpHeaders {
     // Thêm jwt token vào header trước khi gửi request
-    return new HttpHeaders({ Authorization: `Bearer ${this.getJwtToken()}` });
+    const token = sessionStorage.getItem('token');
+    return new HttpHeaders().set('Authorization', 'Bearer ' + token);
   }
 
   isTokenExpired(): boolean {
