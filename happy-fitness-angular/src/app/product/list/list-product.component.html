@@ -31,7 +31,7 @@
                 <tbody *ngIf="listProduct">
                   <tr *ngFor="let product of listProduct">
                     <td>
-                      <img [src]="'http://localhost:8089/' + product.imagePath" alt="Product Image">
+                      <img [src]="product.imagePath" alt="Product Image">
                     </td>
                     <td>
                       {{product.name}}
