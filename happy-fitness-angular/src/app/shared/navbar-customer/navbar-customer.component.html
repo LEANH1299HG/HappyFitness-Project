@@ -1,4 +1,4 @@
-<div class="nav-container">
+<div *ngIf="shouldShowNav" class="nav-container">
   <a class="navbar-brand" [routerLink]="['/home']">
     <img alt="" src="./assets/img/brand/fitnesshappy.png">
   </a>
@@ -13,6 +13,6 @@
   <div class="user-info">
     <div *ngIf="roleNumber">{{userName}}</div>
     <a *ngIf="!roleNumber" [routerLink]="['/login']" style="margin-left: 1rem; margin-right: 0.5rem;">Đăng nhập</a>
-    <a *ngIf="roleNumber" [routerLink]="['/login']" style="margin-left: 1rem; margin-right: 0.5rem;">Đăng xuất</a>
+    <div *ngIf="roleNumber" [routerLink]="['/login']" (click)="handleLogout()" style="margin-left: 1rem; margin-right: 0.5rem;">Đăng xuất</div>
   </div>
 </div>

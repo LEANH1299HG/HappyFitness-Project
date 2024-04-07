@@ -31,3 +31,7 @@ img {
 .user-info {
     display: flex;
 }
+
+.user-info:hover {
+    cursor: pointer;
+}

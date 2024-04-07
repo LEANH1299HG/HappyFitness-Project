@@ -15,6 +15,7 @@ export class NavbarCustomerComponent implements OnInit {
   public focus;
   public roleNumber: any;
   public userName: any;
+  public shouldShowNav = false;
   listTitles: any[];
   @Input() public managerNavbar: any;
   @Input() public customerNavbar: any;
@@ -31,6 +32,18 @@ export class NavbarCustomerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const url = window.location.pathname;
+        const segments = url.split('/');
+        this.shouldShowNav = segments[segments.length - 1] != 'login';
+        this.takeOwnInfo()
+      }
+    })
+    
+  }
+
+  takeOwnInfo() {
     this.authService.getOwnInfo().subscribe({
       next: (res) => {
         if (res.body.role && (res.body.role.id !== 1 && res.body.role.id !== 2)) {
@@ -53,6 +66,10 @@ export class NavbarCustomerComponent implements OnInit {
     this.managerNavbar = false;
     this.customerNavbar = false;
     this.guestNavbar = true;
+  }
+
+  handleLogout () {
+    this.authService.signout()
   }
 
 }

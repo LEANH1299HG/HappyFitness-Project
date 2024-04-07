@@ -74,7 +74,6 @@ export class AuthService {x
   }
 
   getHeaders(): HttpHeaders {
-    // Thêm jwt token vào header trước khi gửi request
     const token = sessionStorage.getItem('token');
     return new HttpHeaders().set('Authorization', 'Bearer ' + token);
   }

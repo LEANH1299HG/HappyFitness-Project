@@ -1,19 +1,16 @@
 <!-- Màn hình customer -->
-<div *ngIf="(guestNavbar)">
-    <app-navbar-customer [guestNavbar]="guestNavbar" [guestNavbar]="guestNavbar"
-        [username]="username"></app-navbar-customer>
+<div>
+    <app-navbar-customer [guestNavbar]="guestNavbar" [guestNavbar]="guestNavbar"></app-navbar-customer>
     <!-- Sidenav -->
     <router-outlet *ngIf="guestNavbar"></router-outlet>
     <app-footer *ngIf="guestNavbar"></app-footer>
 </div>
 
 <!-- Màn hình quản lý -->
-<div *ngIf="( managerNavbar )">
+<!-- <div *ngIf="( managerNavbar )">
     <app-sidebar [managerNavbar]="managerNavbar" [username]="username"></app-sidebar>
     <div class="main-content">
-        <!-- Top navbar -->
         <app-navbar [managerNavbar]="managerNavbar" [username]="username"></app-navbar>
-        <!-- Pages -->
         <router-outlet></router-outlet>
     </div>
-</div>
+</div> -->
