@@ -26,6 +26,7 @@ import { TicketDetailComponent } from "./ticket/ticket-detail/ticket-detail.comp
 import { ListTicketAdComponent } from "./ticket/list-admin/list-ticket-admin.component";
 import { CreateTicketComponent } from "./ticket/create-ticket/create-ticket.component";
 import { EditTicketComponent } from "./ticket/edit-ticket/edit-ticket.component";
+import { ListCustomerProductComponent } from "./product/list-customer/list"
 
 
 const routes: Routes = [
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'list-product', component: ListProductComponent },
+  { path: 'products', component: ListCustomerProductComponent },
   { path: 'create-product', component: CreateProductComponent },
   { path: 'edit-product/:code', component: EditProductComponent },
   { path: 'create-account', component: CreateAccountComponent },

@@ -1,0 +1,55 @@
+<main>
+  <section class="section">
+    <div class="container-fluid mt-5">
+      <div class="filter-container">
+        <div class="input-group radio-column">
+          <p>Category: </p>
+          <div *ngFor="let category of categories">
+            <input type="radio" name="category" [value]="category.name" [(ngModel)]="selectedCategory" (click)="onCategoryClicked(category.name)">
+            <label for="{{category.name}}">{{ category.name }}</label>
+          </div>
+        </div>
+        <div class="input-group radio-column">
+          <label for="suppliers">Nhà cung cấp:</label>
+          <div *ngFor="let supplier of suppliers">
+            <input type="radio" name="supplier" id="{{supplier.id}}" [value]="supplier.id" [(ngModel)]="selectedSupplier" (click)="onSupplierClicked(supplier.id)">
+            <label for="{{supplier.id}}">{{supplier.name}}</label>
+          </div>
+        </div>
+        <div class="input-group radio-column">
+          <p>Trung tâm: </p>
+          <select [(ngModel)]="selectedFacility" id="selectedFacility" style="padding-left: 1rem;"
+            aria-describedby="productType-help" title="Cơ sở" (change)="onFacilityChange($event.target.value)">
+            <option *ngFor="let facility of facilities" [value]="facility.id" [selected]="facility.id === facilities[0].id" >{{ facility.name }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card shadow" style="box-shadow: none !important;">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <h3 class="mb-0">Products List</h3>
+                </div>
+              </div>
+            </div>
+            <div class="underline"></div>
+            <div style="padding-top: 1rem; background-color: #eff0f1">
+              <div class="products-container">
+                <div class="product-row" *ngFor="let row of productsByRow">
+                  <div class="product-card" *ngFor="let product of row" (click)="handleCardClick(product.code)">
+                    <img class="card-image" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+                    <div class="product-meta">{{product.name}}</div>
+                    <div class="product-meta price">{{product.price}}đ</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

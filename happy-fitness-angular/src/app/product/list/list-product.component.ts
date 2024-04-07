@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Import CommonModule ở đây
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/services/api.service'
+import { AuthService } from 'src/app/services/services/auth.service';
 
 
 @Component({
@@ -20,9 +20,24 @@ export class ListProductComponent implements OnInit {
   constructor(
     private router: Router,
     private apiService: ApiService,
+    private authService: AuthService,
   ) { }
 
   ngOnInit() {
+    this.authService.getOwnInfo().subscribe({
+      next: (res) => {
+        if (res.body.role && (res.body.role.id !== 1 && res.body.role.id !== 2)) {
+          // TODO: handle not allow notification
+          this.router.navigate([`/products`])
+          return
+        }
+      }, // nextHandler
+      error: (err) => {
+        console.info(err)
+        this.router.navigate([`/home`])
+        return
+      }, // errorHandler
+    })
     this.value = 'default';
     this.apiService.getProduct().subscribe({
       next: (res) => {
