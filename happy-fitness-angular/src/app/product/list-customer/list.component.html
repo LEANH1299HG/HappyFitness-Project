@@ -39,7 +39,7 @@
               <div class="products-container">
                 <div class="product-row" *ngFor="let row of productsByRow">
                   <div class="product-card" *ngFor="let product of row" (click)="handleCardClick(product.code)">
-                    <img class="card-image" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+                    <img class="card-image" [src]="'http://localhost:8089' + product.imagePath">
                     <div class="product-meta">{{product.name}}</div>
                     <div class="product-meta price">{{product.price}}đ</div>
                   </div>

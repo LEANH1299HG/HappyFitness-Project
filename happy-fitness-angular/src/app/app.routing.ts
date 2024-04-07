@@ -27,15 +27,14 @@ import { ListTicketAdComponent } from "./ticket/list-admin/list-ticket-admin.com
 import { CreateTicketComponent } from "./ticket/create-ticket/create-ticket.component";
 import { EditTicketComponent } from "./ticket/edit-ticket/edit-ticket.component";
 import { ListCustomerProductComponent } from "./product/list-customer/list"
+import { ProductDetailComponent } from "./product/detail/product-detail.component"
 
 
 const routes: Routes = [
 
   { path: 'register', component: SignupComponent },
   { path: 'home', component: IntroductionComponent },
-
-
-
+  { path: 'product-detail/:code', component: ProductDetailComponent},
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPWComponent },
   { path: 'change-password', component: ChangePassComponent },

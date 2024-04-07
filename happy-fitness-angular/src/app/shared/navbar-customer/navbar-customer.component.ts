@@ -3,6 +3,7 @@ import { Router, NavigationEnd, NavigationStart } from "@angular/router";
 import { Location, PopStateEvent } from "@angular/common";
 import { ROUTES2 } from "../sidebar/sidebar.component";
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
+import { AuthService } from 'src/app/services/services/auth.service';
 
 @Component({
   selector: "app-navbar-customer",
@@ -12,92 +13,40 @@ import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 export class NavbarCustomerComponent implements OnInit {
   public isCollapsed = true;
   public focus;
-  private lastPoppedUrl: string;
-  private yScrollStack: number[] = [];
+  public roleNumber: any;
+  public userName: any;
   listTitles: any[];
   @Input() public managerNavbar: any;
   @Input() public customerNavbar: any;
   @Input() public guestNavbar: any;
   // @Input() public username: any;
   @Input() public id: any;
-  username: string;
 
   constructor(
     public location: Location,
     private router: Router,
-    // private authService: AuthService,
+    private authService: AuthService,
     public dialog: MatDialog, private renderer: Renderer2,
     // private dialogService: DialogService
   ) { }
 
   ngOnInit() {
-    // if (!this.authService.getJwtToken()) {
-    //   this.username = '';
-    // }
+    this.authService.getOwnInfo().subscribe({
+      next: (res) => {
+        if (res.body.role && (res.body.role.id !== 1 && res.body.role.id !== 2)) {
+          this.router.navigate([`/home`])
+          return
+        }
 
-    if (sessionStorage.getItem("Username")) {
-      this.username = sessionStorage.getItem("Username");
-    }
-
-    this.router.events.subscribe((event) => {
-      this.isCollapsed = true;
-      if (event instanceof NavigationStart) {
-        if (event.url != this.lastPoppedUrl)
-          this.yScrollStack.push(window.scrollY);
-      } else if (event instanceof NavigationEnd) {
-        if (event.url == this.lastPoppedUrl) {
-          this.lastPoppedUrl = undefined;
-          window.scrollTo(0, this.yScrollStack.pop());
-        } else window.scrollTo(0, 0);
-      }
-    });
-    this.location.subscribe((ev: PopStateEvent) => {
-      this.lastPoppedUrl = ev.url;
-    });
-  }
-
-  isHome() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-
-    if (titlee === "home") {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  isDocumentation() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee === "documentation") {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  getTitle() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee.charAt(0) === "#") {
-      titlee = titlee.slice(1);
-    }
-
-    for (var item = 0; item < this.listTitles.length; item++) {
-      if (this.listTitles[item].path === titlee) {
-        return this.listTitles[item].title;
-      }
-    }
-    return "Dashboard";
-  }
-
-  logout() {
-    // this.authService.signout().subscribe({
-    //   next: () => {
-    //     sessionStorage.removeItem("roleName");
-    //     this.authService.setAuthenticationStatus(false);
-    //     // this.refresh();
-    //     console.log("CUSTOMER LOG OUT", sessionStorage.getItem("roleName"));
-    //     this.router.navigate(["/login"]);
-    //   },
-    // });
+        this.roleNumber = res.body.role.id
+        this.userName = res.body.username
+      }, // nextHandler
+      error: (err) => {
+        this.roleNumber = null
+        this.userName = null
+        return
+      }, // errorHandler
+    })
   }
 
   refresh() {

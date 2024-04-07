@@ -32,6 +32,7 @@ import { EditProductComponent } from "./product/edit/edit-product.component";
 import { CreateProductComponent } from "./product/create/create-product.component";
 import { ListProductComponent } from "./product/list/list-product.component";
 import { ListCustomerProductComponent } from "./product/list-customer/list";
+import { ProductDetailComponent } from "./product/detail/product-detail.component";
 import { EditAccountComponent } from "./account/edit/edit-account.component";
 import { CreateAccountComponent } from "./account/create/create-account.component";
 import { ListAccountComponent } from "./account/list/list-account.component";
@@ -68,6 +69,7 @@ import { ListTicketAdComponent } from "./ticket/list-admin/list-ticket-admin.com
     DashboardComponent,
     ListProductComponent,
     ListCustomerProductComponent,
+    ProductDetailComponent,
     CreateProductComponent,
     EditProductComponent,
     EditAccountComponent,

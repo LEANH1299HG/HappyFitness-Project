@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common'; // Import CommonModule ở đây
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/services/api.service'
 
-
 @Component({
   selector: 'app-list-customer-product',
   templateUrl: './list.component.html',
@@ -113,6 +112,6 @@ export class ListCustomerProductComponent implements OnInit {
   }
 
   handleCardClick (code) {
-    // handle customer product detail
+    this.router.navigate([`/product-detail/${code}`])
   }
 }
