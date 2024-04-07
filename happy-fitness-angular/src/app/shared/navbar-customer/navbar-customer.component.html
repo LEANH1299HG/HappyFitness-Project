@@ -11,7 +11,7 @@
     <a [routerLink]="['/about']" class="nav-item">Về chúng tôi</a>
   </div>
   <div class="user-info">
-    <div *ngIf="roleNumber">{{userName}}</div>
+    <div *ngIf="roleNumber">{{fullName}}</div>
     <a *ngIf="!roleNumber" [routerLink]="['/login']" style="margin-left: 1rem; margin-right: 0.5rem;">Đăng nhập</a>
     <div *ngIf="roleNumber" [routerLink]="['/login']" (click)="handleLogout()" style="margin-left: 1rem; margin-right: 0.5rem;">Đăng xuất</div>
   </div>

@@ -83,6 +83,16 @@ export class ListCustomerProductComponent implements OnInit {
     })
   }
 
+  getProductNameByLimit(product) {
+    if (!product.name) {
+      return ''
+    }
+    if (product.name.length > 25) {
+      return product.name.substring(0, 22) + '...'
+    }
+    return product.name
+  }
+
   onSupplierClicked(supplierId) {
     if (this.selectedSupplier == supplierId) {
       this.selectedSupplier = null

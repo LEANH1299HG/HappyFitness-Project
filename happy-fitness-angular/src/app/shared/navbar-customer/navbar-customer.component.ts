@@ -14,7 +14,7 @@ export class NavbarCustomerComponent implements OnInit {
   public isCollapsed = true;
   public focus;
   public roleNumber: any;
-  public userName: any;
+  public fullName: any;
   public shouldShowNav = false;
   listTitles: any[];
   @Input() public managerNavbar: any;
@@ -46,17 +46,12 @@ export class NavbarCustomerComponent implements OnInit {
   takeOwnInfo() {
     this.authService.getOwnInfo().subscribe({
       next: (res) => {
-        if (res.body.role && (res.body.role.id !== 1 && res.body.role.id !== 2)) {
-          this.router.navigate([`/home`])
-          return
-        }
-
         this.roleNumber = res.body.role.id
-        this.userName = res.body.username
+        this.fullName = res.body.fullName
       }, // nextHandler
       error: (err) => {
         this.roleNumber = null
-        this.userName = null
+        this.fullName = null
         return
       }, // errorHandler
     })

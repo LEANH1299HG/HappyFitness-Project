@@ -219,6 +219,7 @@ cursor: pointer;
   flex-direction: row;
   justify-content: space-evenly;
   background-color: #eff0f1;
+  margin-bottom: 1rem;
 }
 
 .products-container {
@@ -231,7 +232,7 @@ cursor: pointer;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   width: calc(100% - 1rem);
-  height: calc(80% - 1rem);
+  height: calc(60% - 1rem);
   object-fit: cover;
 }
 
@@ -243,10 +244,19 @@ cursor: pointer;
 }
 
 .price {
+  margin-left: 5px;
+  margin-right: 5px;
   font-size: 1.7rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 10px);
+}
+
+.status {
+  font-size: 1rem;
 }
 
 .row {

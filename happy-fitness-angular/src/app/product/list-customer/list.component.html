@@ -39,9 +39,12 @@
               <div class="products-container">
                 <div class="product-row" *ngFor="let row of productsByRow">
                   <div class="product-card" *ngFor="let product of row" (click)="handleCardClick(product.code)">
-                    <img class="card-image" [src]="'http://localhost:8089' + product.imagePath">
-                    <div class="product-meta">{{product.name}}</div>
-                    <div class="product-meta price">{{product.price}}đ</div>
+                    <img class="card-image" [src]="product.imagePath">
+                    <div class="product-meta">{{getProductNameByLimit(product)}}</div>
+                    <div class="product-meta price">
+                      <div>{{product.price}}đ</div>
+                      <div class="status">{{product.status}}</div>
+                    </div>
                   </div>
                 </div>
               </div>
