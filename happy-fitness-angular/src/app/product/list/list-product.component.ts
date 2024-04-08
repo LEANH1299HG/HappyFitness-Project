@@ -33,7 +33,6 @@ export class ListProductComponent implements OnInit {
         }
       }, // nextHandler
       error: (err) => {
-        console.info(err)
         this.router.navigate([`/home`])
         return
       }, // errorHandler

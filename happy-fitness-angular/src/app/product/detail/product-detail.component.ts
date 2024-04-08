@@ -49,6 +49,7 @@ export class ProductDetailComponent implements OnInit {
       next: (res) => {
         if (res.body.role && (res.body.role.id !== 1 && res.body.role.id !== 2)) {
           // TODO: handle not allow notification
+          // TODO: handle for customer view
           this.router.navigate([`/home`])
           return
         }

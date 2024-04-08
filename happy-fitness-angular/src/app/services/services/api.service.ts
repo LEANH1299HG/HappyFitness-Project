@@ -58,7 +58,7 @@ export class ApiService {
 
   private getHeadersWithToken(): HttpHeaders {
     const token = sessionStorage.getItem('token');
-    return new HttpHeaders().set('Authorization', 'Bearer ' + token);
+    return new HttpHeaders().set('Authorization', token ? 'Bearer ' + token : null);
   }
   getUsers(): Observable<any> {
     const headers = this.getHeadersWithToken();
@@ -155,23 +155,19 @@ export class ApiService {
   }
 
   public getProduct(facilityId = 2): Observable<any> {
-    const headers = this.getHeadersWithToken();
-    return this.http.get<any>(`${this.GET_PRODUCT}?facilityId=${facilityId}`, { headers });
+    return this.http.get<any>(`${this.GET_PRODUCT}?facilityId=${facilityId}`);
   }
 
   public getAllFacility(): Observable<any> {
-    const headers = this.getHeadersWithToken();
-    return this.http.get<any>(`${this.GET_ALL_FACILITY}`, { headers });
+    return this.http.get<any>(`${this.GET_ALL_FACILITY}`);
   }
 
   public getAllCategory(): Observable<any> {
-    const headers = this.getHeadersWithToken();
-    return this.http.get<any>(`${this.GET_ALL_CATEGORY}`, { headers });
+    return this.http.get<any>(`${this.GET_ALL_CATEGORY}`);
   }
 
   public getAllSupplier(): Observable<any> {
-    const headers = this.getHeadersWithToken();
-    return this.http.get<any>(`${this.GET_ALL_SUPPLIER}`, { headers });
+    return this.http.get<any>(`${this.GET_ALL_SUPPLIER}`);
   }
 
   public updateProduct(nextProduct, id): Observable<any> {

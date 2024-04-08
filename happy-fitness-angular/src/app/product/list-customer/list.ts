@@ -61,8 +61,10 @@ export class ListCustomerProductComponent implements OnInit {
 
   seperateProductByRows (products, rowSize) {
     const result: any[][] = [];
-    for (let i = 0; i < products.length; i += rowSize) {
+    if (products) {
+      for (let i = 0; i < products.length; i += rowSize) {
         result.push(products.slice(i, i + rowSize));
+    }
     }
     return result;
   }
@@ -74,11 +76,12 @@ export class ListCustomerProductComponent implements OnInit {
   resetProduct(facility) {
     this.apiService.getProduct(facility).subscribe({
       next: (res) => {
+        if (!res.body) return
         this.listProduct = res.body
         this.productsByRow = this.seperateProductByRows(res.body, 4)
       }, // nextHandler
       error: (err) => {
-        console.info(err)
+        console.info('err', err)
       }, // errorHandler
     })
   }
